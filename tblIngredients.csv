@@ -1,524 +1,517 @@
-"pkIngredientID","fldIngredientName","fkIngredientCategoryID","fkDurabilityID","fkNutrientID"
-"51","dark chocolate","1","0","0"
-"52","caputo 00 flour","1","0","0"
-"53","agave nectar","1","0","0"
-"54","almond extract","7","0","0"
-"55","baking powder","1","6","0"
-"56","baking soda","1","6","0"
-"57","sugar","1","0","0"
-"58","cocoa powder","1","0","0"
-"59","dark brown sugar","1","0","0"
-"60","instant yeast","1","0","0"
-"61","light brown sugar","1","0","0"
-"62","pastry flour","1","0","0"
-"63","superfine sugar","1","0","0"
-"64","vanilla extract","1","0","0"
-"65","gluten free flour","1","0","0"
-"66","potato starch","1","0","0"
-"67","rice flour","1","0","0"
-"68","almond milk","2","0","0"
-"69","salted butter","2","0","0"
-"70","earth balance","2","0","0"
-"71","eggs","2","0","0"
-"72","labneh","2","0","0"
-"73","Greek yogurt","2","0","0"
-"74","acai powder","3","0","0"
-"75","currants","3","0","0"
-"76","dried apricots","3","0","0"
-"77","dried cherries","3","0","0"
-"78","dried cranberries","3","0","0"
-"79","dried ginger","3","0","0"
-"80","dried mission figs","3","0","0"
-"81","dried pineapple","3","0","0"
-"82","dried tangerines","3","0","0"
-"83","goji berries","3","0","0"
-"84","golden raisins","3","0","0"
-"85","raisins","3","0","0"
-"86","dried dates","3","0","0"
-"87","ancho peppers","5","0","0"
-"88","arbol peppers","5","0","0"
-"89","Ñora peppers","5","0","0"
-"90","dried chanterelles","4","0","0"
-"92","guajillo peppers","5","0","0"
-"93","dried morels","4","0","0"
-"94","morita peppers","5","0","0"
-"95","calabrian peppers","5","0","0"
-"96","dried porcinis","4","0","0"
-"98","acai chunks","9","0","0"
-"99","frozen avocado","8","0","0"
-"100","frozen artichokes","8","0","0"
-"101","frozen blueberries","9","0","0"
-"102","frozen coconut","9","0","0"
-"103","frozen corn","8","0","0"
-"104","frozen dragonfruit","9","0","0"
-"105","edamame, shelled","8","0","0"
-"106","edamame, whole","8","0","0"
-"107","frozen ginger","9","0","0"
-"108","frozen peaches","9","0","0"
-"109","frozen raspberries","9","0","0"
-"110","frozen strawberries","9","0","0"
-"111","frozen blackberries","9","0","0"
-"112","frozen mango","9","0","0"
-"113","frozen pineapple","9","0","0"
-"114","avocado ice cream","10","0","0"
-"118","shrimp","26","0","0"
-"119","flounder","26","0","0"
-"120","mahi mahi","26","0","0"
-"121","sockeye salmon","26","0","0"
-"122","yellowfin tuna","26","0","0"
-"123","Israeli couscous","12","0","0"
-"124","ramen","12","0","0"
-"125","polenta","12","0","0"
-"126","steel cut oats","12","0","0"
-"127","basmati","12","0","0"
-"128","soba noodles","12","0","0"
-"129","udon noodles","12","0","0"
-"130","couscous","12","0","0"
-"131","farro","12","0","0"
-"132","carnaroli rice","12","0","0"
-"133","short grain rice","12","0","0"
-"134","sushi rice","12","0","0"
-"135","quinoa","12","0","0"
-"137","dry cranberry beans","6","0","0"
-"138","dry black beans","6","0","0"
-"139","cannellini beans","7","0","0"
-"140","dry cannellini beans","6","0","0"
-"141","dry fava beans","6","0","0"
-"142","french lentils","6","0","0"
-"143","green lentils","6","0","0"
-"144","dry chickpeas","6","0","0"
-"145","chickpeas","7","0","0"
-"146","green split peas","6","0","0"
-"147","red kidney beans","7","0","0"
-"148","masoor dal","6","0","0"
-"149","toor dal","6","0","0"
-"150","sona masoori rice","12","0","0"
-"151","idli rice","12","0","0"
-"152","jasmine rice","12","0","0"
-"153","frozen peas","8","0","0"
-"154","pecans","13","0","0"
-"155","pine nuts","13","0","0"
-"156","sliced almonds","13","0","0"
-"157","almonds","13","0","0"
-"158","chopped dates","3","0","0"
-"159","hazelnuts","13","0","0"
-"160","peanuts","13","0","0"
-"161","pistachios","13","0","0"
-"162","cashews, raw salted","13","0","0"
-"163","sunflower kernels","13","0","0"
-"164","walnut oil","14","0","0"
-"165","apple cider vinegar","15","0","0"
-"166","avocado oil","14","0","0"
-"167","balsamic vinegar","15","0","0"
-"168","champagne vinegar","15","0","0"
-"169","grapeseed oil","14","0","0"
-"170","olive oil","14","0","0"
-"171","red wine vinegar","15","0","0"
-"172","sherry vinegar","15","0","0"
-"173","white balsamic vinegar","15","0","0"
-"174","white distilled vinegar","15","0","0"
-"175","rice vinegar","15","0","0"
-"176","sesame oil","14","0","0"
-"177","cashews, roasted","13","0","0"
-"178","walnuts","13","0","0"
-"179","chestnuts","13","0","0"
-"180","pickled hot peppers","7","0","0"
-"181","seaweed salad","21","0","0"
-"182","chia seeds","13","0","0"
-"183","black olives","7","0","0"
-"184","castelvetrano olives","7","0","0"
-"185","minced garlic","7","0","0"
-"186","capers","7","0","0"
-"187","ditalini","12","0","0"
-"188","fusilli","12","0","0"
-"189","orecchiette","12","0","0"
-"190","penne","12","0","0"
-"191","orzo","12","0","0"
-"192","peeled tomatoes","7","0","0"
-"193","tomato paste","7","0","0"
-"194","tomato puree","7","0","0"
-"195","crushed tomatoes","7","0","0"
-"196","apricot preserves","20","0","0"
-"197","fig preserves","20","0","0"
-"198","maple syrup","20","0","0"
-"199","lemon curd","20","0","0"
-"200","Kalamata olives","7","0","0"
-"201","mandarin oranges","7","0","0"
-"202","nutella","20","0","0"
-"203","roasted red peppers","7","0","0"
-"204","gochujang","20","0","0"
-"205","kewpie mayonnaise","20","0","0"
-"206","Pajarero figs","3","0","0"
-"207","cerignola olives","7","0","0"
-"208","Taggiasca olives","7","0","0"
-"209","Dijon mustard","20","0","0"
-"210","mayonnaise","20","0","0"
-"211","sriracha","20","0","0"
-"213","gochugaru","5","0","0"
-"214","anchovies","21","0","0"
-"215","italian breadcrumbs","21","0","0"
-"216","panko breadcrumbs","21","0","0"
-"217","dolmas","21","0","0"
-"219","honey","21","0","0"
-"220","kombu","21","0","0"
-"221","pecan nut thins","21","0","0"
-"222","pepperoncini","7","0","0"
-"223","sardines","21","0","0"
-"224","tortellini","21","0","0"
-"225","ravioli","21","0","0"
-"226","seaweed snacks","21","0","0"
-"227","smoked trout","21","0","0"
-"228","tahini","21","0","0"
-"229","tamarind","18","0","0"
-"230","tempeh","21","0","0"
-"231","canned tuna","21","0","0"
-"232","granola","21","0","0"
-"234","arugula","17","0","0"
-"235","asparagus","17","0","0"
-"236","avocado","17","0","0"
-"237","red bell pepper","17","0","0"
-"238","brussels sprouts","17","0","0"
-"239","cabbage","17","0","0"
-"240","carrots","17","0","0"
-"241","cauliflower","17","0","0"
-"242","celery","17","0","0"
-"243","cherry tomatoes","17","0","0"
-"244","cucumber","17","0","0"
-"245","daikon","17","0","0"
-"246","eggplant","17","0","0"
-"247","escarole","17","0","0"
-"248","fennel","17","0","0"
-"249","garlic","17","0","0"
-"250","ginger","17","0","0"
-"252","kale","17","0","0"
-"253","leeks","17","0","0"
-"255","potatoes","17","0","0"
-"256","baby potatoes","17","0","0"
-"258","radish","17","0","0"
-"259","rapini","17","0","0"
-"260","red onion","17","0","0"
-"261","scallions","17","0","0"
-"262","shallots","17","0","0"
-"263","snow peas","17","0","0"
-"264","spinach","17","0","0"
-"265","yellow squash","17","0","0"
-"266","sugar snap peas","17","0","0"
-"267","sweet potato","17","0","0"
-"268","swiss chard","17","0","0"
-"269","tomatillo","17","0","0"
-"270","tomato","17","0","0"
-"271","zucchini","17","0","0"
-"272","green bell pepper","17","0","0"
-"273","apple","18","0","0"
-"274","banana","18","0","0"
-"275","strawberries","18","0","0"
-"276","raspberries","18","0","0"
-"277","blueberries","18","0","0"
-"278","blackberries","18","0","0"
-"279","green grapes","18","0","0"
-"280","lemon","18","0","0"
-"281","lime","18","0","0"
-"282","orange","18","0","0"
-"283","red pear","18","0","0"
-"284","bosc pear","18","0","0"
-"285","figs","18","0","0"
-"286","mango","18","0","0"
-"287","pineapple","18","0","0"
-"288","cantaloupe","18","0","0"
-"289","honeydew melon","18","0","0"
-"290","rosemary","16","0","0"
-"291","cilantro","16","0","0"
-"292","thyme","16","0","0"
-"293","basil","16","0","0"
-"294","dill","16","0","0"
-"295","chives","16","0","0"
-"296","garlic chives","16","0","0"
-"297","fenugreek leaves","16","0","0"
-"298","oregano","16","0","0"
-"299","bay leaves","16","0","0"
-"300","sage","16","0","0"
-"301","tarragon","16","0","0"
-"302","mint","16","0","0"
-"303","feta","23","0","0"
-"304","Pecorino Romano","23","0","0"
-"307","Pecorino Toscano","23","0","0"
-"308","Parmigiano Reggiano","23","0","0"
-"309","Brie","23","0","0"
-"310","marinated feta","23","0","0"
-"311","provolone","23","0","0"
-"312","fresh mozzarella","23","0","0"
-"313","Manchego","23","0","0"
-"314","goat cheese","23","0","0"
-"315","ricotta","23","0","0"
-"316","ricotta salata","23","0","0"
-"317","Taleggio","23","0","0"
-"318","cream cheese","23","0","0"
-"319","Camembert","23","0","0"
-"320","Oaxaca cheese","23","0","0"
-"323","Cotija","23","0","0"
-"324","halloumi","23","0","0"
-"325","cheddar","23","0","0"
-"327","paneer","23","0","0"
-"328","Queso Fresco","23","0","0"
-"329","Asiago","23","0","0"
-"330","buffalo mozzarella","23","0","0"
-"331","Roquefort","23","0","0"
-"332","cumin seeds","24","0","0"
-"333","lemon juice","18","0","0"
-"334","parsley","16","0","0"
-"335","salt","24","0","0"
-"337","whole cinnamon","24","0","0"
-"338","phyllo dough","21","0","0"
-"339","unsalted butter","2","0","0"
-"340","prosciutto","25","0","0"
-"341","pancetta","25","0","0"
-"342","rack of lamb","25","0","0"
-"343","guanciale","25","0","0"
-"344","chicken thighs","25","0","0"
-"345","chicken breasts","25","0","0"
-"346","whole chicken","25","0","0"
-"347","pork tenderloin","25","0","0"
-"348","leg of lamb","25","0","0"
-"349","lamb shoulder","25","0","0"
-"350","chicken broth","21","0","0"
-"351","mung bean sprouts","17","0","0"
-"352","Thai tamarind","21","0","0"
-"353","palm sugar","21","0","0"
-"354","dried shrimp","21","0","0"
-"361","tofu","21","0","0"
-"362","rice noodles","12","0","0"
-"363","fish sauce","21","0","0"
-"364","oyster sauce","21","0","0"
-"365","water","21","0","0"
-"366","preserved daikon","21","0","0"
-"368","Roma tomatoes","17","0","0"
-"369","plum tomatoes","17","0","0"
-"370","slivered almonds","13","0","0"
-"371","piment d'Espelette","24","0","0"
-"372","white onion","17","0","0"
-"373","yellow onion","17","0","0"
-"375","paprika","24","0","0"
-"376","smoked paprika","24","0","0"
-"378","brioche bread","12","0","0"
-"379","sourdough bread","12","0","0"
-"380","country bread","12","0","0"
-"381","Marcona almonds","13","0","0"
-"382","dried Turkish figs","3","0","0"
-"383","ground cinnamon","24","0","0"
-"384","whole grain mustard","20","0","0"
-"385","cranberies","18","0","0"
-"386","coriander seeds","24","0","0"
-"387","fennel seeds","24","0","0"
-"388","ground lamb","25","0","0"
-"389","kosher salt","24","0","0"
-"390","coarse sea salt","24","0","0"
-"391","cayenne pepper","24","0","0"
-"392","piquillo pepper","21","0","0"
-"393","active dry yeast","1","6","0"
-"394","confectioners sugar","1","0","0"
-"397","white wine vinegar","15","0","0"
-"398","Calabrian pepper flakes","24","0","0"
-"399","dried bay leaf","16","0","0"
-"400","juniper berries","24","0","0"
-"401","cloves","24","0","0"
-"402","pearl onions","17","0","0"
-"403","black peppercorns","24","0","0"
-"404","argan oil","14","0","0"
-"405","milk","2","0","0"
-"406","marjoram","16","0","0"
-"407","dried marjoram","24","0","0"
-"408","walnut milk","21","0","0"
-"411","low-sodium chicken broth","21","0","0"
-"412","golden beets","17","0","0"
-"416","poppy seeds","24","0","0"
-"417","mirin","21","0","0"
-"418","white miso","21","0","0"
-"419","red miso","21","0","0"
-"420","sesame seeds","13","0","0"
-"421","Arborio rice","12","0","0"
-"422","mascarpone","23","0","0"
-"423","espresso","21","0","0"
-"424","bitter cocoa","1","0","0"
-"427","butternut squash","17","0","0"
-"428","pumpkin seeds","13","0","0"
-"429","orange zest","18","0","0"
-"430","lemon zest","18","0","0"
-"431","Fresno chile","17","0","0"
-"432","black truffle","17","0","0"
-"433","white truffle","17","0","0"
-"434","burrata","23","0","0"
-"439","apricot","18","0","0"
-"440","endive","17","0","0"
-"441","pomegranate","18","0","0"
-"442","nectarine","18","0","0"
-"443","plums","18","0","0"
-"444","prunes","3","0","0"
-"447","radicchio","17","0","0"
-"448","sunchokes","17","0","0"
-"449","savoy cabbage","17","0","0"
-"450","chervil","16","0","0"
-"457","oil cured olives","21","0","0"
-"458","savory","16","0","0"
-"459","lobster","26","0","0"
-"460","branzino","26","0","0"
-"461","squid","26","0","0"
-"462","scallops","26","0","0"
-"463","grouper","26","0","0"
-"464","mussels","26","0","0"
-"467","prawns","26","0","0"
-"468","octopus","26","0","0"
-"471","clams","26","0","0"
-"472","red mullet","26","0","0"
-"475","Branzi","23","0","0"
-"476","Bitto","23","0","0"
-"477","Cacio","23","0","0"
-"479","rennet","23","0","0"
-"480","Casciotta di Urbino","23","0","0"
-"481","Fontina","23","0","0"
-"482","mozzarella","23","0","0"
-"487","Provola","23","0","0"
-"488","heavy cream","2","0","0"
-"493","Scamorza","23","0","0"
-"494","Stracchino","23","0","0"
-"496","duck breast","25","0","0"
-"497","lamb tallow","25","0","0"
-"498","coppa","25","0","0"
-"499","cotechino","25","0","0"
-"502","pheasant","25","0","0"
-"503","ground pork","25","0","0"
-"504","ground beef","25","0","0"
-"505","mortadella","25","0","0"
-"508","n'duja","25","0","0"
-"509","soppressata","25","0","0"
-"510","speck","25","0","0"
-"511","ground veal","25","0","0"
-"512","veal","25","0","0"
-"513","enoki mushrooms","17","0","0"
-"514","burdock","17","0","0"
-"515","kabocha squash","17","0","0"
-"516","mizuna","17","0","0"
-"517","satsuma orange","18","0","0"
-"518","taro","17","0","0"
-"519","ube","17","0","0"
-"520","wasabi root","17","0","0"
-"522","shishito pepper","17","0","0"
-"523","ikura","26","0","0"
-"527","ao nori","21","0","0"
-"528","gyoza","21","0","0"
-"529","bonito flakes","21","0","0"
-"530","furikake","21","0","0"
-"533","shichimi togarashi","24","0","0"
-"534","MSG (ajinomoto)","24","0","0"
-"535","ponzu","20","0","0"
-"536","sansho pepper","24","0","0"
-"537","shoyu","20","0","0"
-"538","takuan","20","0","0"
-"539","tamari","20","0","0"
-"540","wakame","21","0","0"
-"541","yuzu","18","0","0"
-"542","yuzu kosho","21","0","0"
-"543","dried shiitake mushrooms","21","0","0"
-"545","panko","21","0","0"
-"546","Japanese eggplant","17","0","0"
-"547","Persian cucumber","17","0","0"
-"548","saffron","24","0","0"
-"549","dried fenugreek leaves","24","0","0"
-"550","turmeric powder","24","0","0"
-"551","dried rose petals","24","0","0"
-"552","dried mint","24","0","0"
-"553","nigella","24","0","0"
-"560","dried barberries","3","0","0"
-"561","dried Perisan limes","3","0","0"
-"562","pomegranate molasses","21","0","0"
-"563","pomegranate juice","21","0","0"
-"564","frozen fava beans","8","0","0"
-"565","pita bread","21","0","0"
-"569","curry leaves","16","0","0"
-"570","serrano chile","17","0","0"
-"575","coconut","18","0","0"
-"576","Kashmiri chili powder","24","0","0"
-"577","mango powder","24","0","0"
-"578","dried curry leaves","24","0","0"
-"579","asafetida","24","0","0"
-"580","kala namak","24","0","0"
-"581","black cardamom","24","0","0"
-"582","ajwain","24","0","0"
-"584","green cardamom","24","0","0"
-"585","Ceylon cinnamon","24","0","0"
-"587","coriander","24","0","0"
-"589","yellow mustard seeds","24","0","0"
-"590","brown mustard seeds","24","0","0"
-"591","nutmeg","24","0","0"
-"592","mace","24","0","0"
-"593","star anise","24","0","0"
-"598","urad dal","6","0","0"
-"599","channa dal","12","0","0"
-"600","poha","12","0","0"
-"601","moong dal","6","0","0"
-"604","ghee","2","0","0"
-"605","nylon sev","21","0","0"
-"606","raw unsalted cashews","13","0","0"
-"607","garlic-ginger paste","21","0","0"
-"610","acorn squash","17","0","0"
-"611","allspice","24","0","0"
-"612","almond butter","21","0","0"
-"613","Andouille sausage","25","0","0"
-"614","artichokes","17","0","0"
-"615","canned artichoke hearts","7","0","0"
-"616","bacon","25","0","0"
-"617","barley","12","0","0"
-"618","red beets","17","0","0"
-"619","bok choy","17","0","0"
-"620","broccoli","17","0","0"
-"621","purple cabbage","17","0","0"
-"622","caraway seeds","24","0","0"
-"623","frozen cauliflower","8","0","0"
-"624","cherries","18","0","0"
-"625","chocolate chips","1","0","0"
-"626","chorizo (Mexican)","25","0","0"
-"627","coconut milk","21","0","0"
-"628","cream of tartar","24","0","0"
-"629","medjool dates","18","0","0"
-"630","baguette","12","0","0"
-"631","garam masala","24","0","0"
-"632","garlic powder","24","0","0"
-"633","gnocchi","12","0","0"
-"634","red grapes","18","0","0"
-"635","hominy","12","0","0"
-"636","sweet corn","17","0","0"
-"637","jalapeño","17","0","0"
-"638","lacinato kale","17","0","0"
-"639","kimchi","21","0","0"
-"640","lemongrass","16","0","0"
-"641","matzo meal","12","0","0"
-"643","crimini mushrooms","17","0","0"
-"644","shiitake mushrooms","17","0","0"
-"645","maitake mushrooms","17","0","0"
-"646","portabella mushrooms","17","0","0"
-"647","nori","21","0","0"
-"648","peach","18","0","0"
-"649","pesto","21","0","0"
-"650","pinto beans","6","0","0"
-"651","plantain","17","0","0"
-"652","Poblano pepper","17","0","0"
-"653","pork shoulder","25","0","0"
-"654","russet potato","17","0","0"
-"655","Manzanilla olives","7","0","0"
-"656","tilapia","26","0","0"
-"657","turnips","17","0","0"
-"658","watermelon","18","0","0"
-"660","black beans","6","3","0"
-"661","jar Calabrian peppers","7","3","0"
-"662","dried dill","24","3","0"
-"663","celery seed","24","3","0"
-"664","dried lemon peel","24","3","0"
-"665","nutritional yeast","21","2","0"
-"667","dry pinto beans","6","3","0"
-"668","dry red kidney beans","6","3","0"
-"669","vanilla beans","24","2","0"
-"670","fine sea salt","24","3","0"
-"671","Indian tamarind concentrate","3","2","0"
-"672","canned sliced beets","7","3","0"
-"673","parsnips","17","2","0"
-"674","delicata squash","17","2","0"
-"675","kohlrabi","17","2","0"
+pkIngredientID,fldIngredientName,fldIngredientCategory
+51,dark chocolate,Baking
+52,caputo 00 flour,Baking
+53,agave nectar,Baking
+55,baking powder,Baking
+56,baking soda,Baking
+57,sugar,Baking
+58,cocoa powder,Baking
+59,dark brown sugar,Baking
+60,instant yeast,Baking
+61,light brown sugar,Baking
+62,pastry flour,Baking
+63,superfine sugar,Baking
+64,vanilla extract,Baking
+65,gluten free flour,Baking
+66,potato starch,Baking
+67,rice flour,Baking
+393,active dry yeast,Baking
+394,confectioners sugar,Baking
+424,bitter cocoa,Baking
+625,chocolate chips,Baking
+68,almond milk,Dairy
+69,salted butter,Dairy
+70,earth balance,Dairy
+71,eggs,Dairy
+72,labneh,Dairy
+73,Greek yogurt,Dairy
+339,unsalted butter,Dairy
+405,milk,Dairy
+488,heavy cream,Dairy
+604,ghee,Dairy
+74,acai powder,Dried Fruit
+75,currants,Dried Fruit
+76,dried apricots,Dried Fruit
+77,dried cherries,Dried Fruit
+78,dried cranberries,Dried Fruit
+79,dried ginger,Dried Fruit
+80,dried mission figs,Dried Fruit
+81,dried pineapple,Dried Fruit
+82,dried tangerines,Dried Fruit
+83,goji berries,Dried Fruit
+84,golden raisins,Dried Fruit
+85,raisins,Dried Fruit
+86,dried dates,Dried Fruit
+158,chopped dates,Dried Fruit
+206,pajarero figs,Dried Fruit
+382,dried Turkish figs,Dried Fruit
+444,prunes,Dried Fruit
+560,dried barberries,Dried Fruit
+561,dried Perisan limes,Dried Fruit
+671,Indian tamarind concentrate,Dried Fruit
+90,dried chanterelles,Dried Mushrooms
+93,dried morels,Dried Mushrooms
+96,dried porcinis,Dried Mushrooms
+87,ancho peppers,Dried Peppers
+88,arbol peppers,Dried Peppers
+89,nora peppers,Dried Peppers
+92,guajillo peppers,Dried Peppers
+94,morita peppers,Dried Peppers
+95,calabrian peppers,Dried Peppers
+213,gochugaru,Dried Peppers
+137,dry cranberry beans,Legumes
+138,dry black beans,Legumes
+140,dry cannellini beans,Legumes
+141,dry fava beans,Legumes
+142,french lentils,Legumes
+143,green lentils,Legumes
+144,dry chickpeas,Legumes
+146,green split peas,Legumes
+148,masoor dal,Legumes
+149,toor dal,Legumes
+598,urad dal,Legumes
+601,moong dal,Legumes
+650,pinto beans,Legumes
+660,"black beans, canned",Legumes
+667,dry pinto beans,Legumes
+668,dry red kidney beans,Legumes
+54,almond extract,Canned Vegetables
+139,cannellini beans,Canned Vegetables
+145,chickpeas,Canned Vegetables
+147,red kidney beans,Canned Vegetables
+180,pickled hot peppers,Canned Vegetables
+183,black olives,Canned Vegetables
+184,castelvetrano olives,Canned Vegetables
+185,minced garlic,Canned Vegetables
+186,capers,Canned Vegetables
+192,peeled tomatoes,Canned Vegetables
+193,tomato paste,Canned Vegetables
+194,tomato puree,Canned Vegetables
+195,crushed tomatoes,Canned Vegetables
+200,kalmata olives,Canned Vegetables
+201,mandarin oranges,Canned Vegetables
+203,roasted red peppers,Canned Vegetables
+207,cerignola olives,Canned Vegetables
+208,taggiasca olives,Canned Vegetables
+222,pepperoncini,Canned Vegetables
+615,canned artichoke hearts,Canned Vegetables
+655,Manzanilla olives,Canned Vegetables
+661,jar Calabrian peppers,Canned Vegetables
+672,canned sliced beets,Canned Vegetables
+99,frozen avocado,Frozen Vegetables
+100,frozen artichokes,Frozen Vegetables
+103,frozen corn,Frozen Vegetables
+105,"edamame, shelled",Frozen Vegetables
+106,"edamame, whole",Frozen Vegetables
+153,frozen peas,Frozen Vegetables
+564,frozen fava beans,Frozen Vegetables
+623,frozen cauliflower,Frozen Vegetables
+98,acai chunks,Frozen Fruit
+101,frozen blueberries,Frozen Fruit
+102,frozen coconut,Frozen Fruit
+104,frozen dragonfruit,Frozen Fruit
+107,frozen ginger,Frozen Fruit
+108,frozen peaches,Frozen Fruit
+109,frozen raspberries,Frozen Fruit
+110,frozen strawberries,Frozen Fruit
+111,frozen blackberries,Frozen Fruit
+112,frozen mango,Frozen Fruit
+113,frozen pineapple,Frozen Fruit
+123,israeli couscous,Grains
+124,ramen,Grains
+125,polenta,Grains
+126,steel cut oats,Grains
+127,basmati,Grains
+128,soba noodles,Grains
+129,udon noodles,Grains
+130,couscous,Grains
+131,farro,Grains
+132,carnaroli rice,Grains
+133,short grain rice,Grains
+134,sushi rice,Grains
+135,quinoa,Grains
+150,sona masoori rice,Grains
+151,idli rice,Grains
+152,jasmine rice,Grains
+187,ditalini,Grains
+188,fusilli,Grains
+189,orecchiette,Grains
+190,penne,Grains
+191,orzo,Grains
+362,rice noodles,Grains
+378,brioche bread,Grains
+379,sourdough bread,Grains
+380,country bread,Grains
+421,Arborio rice,Grains
+599,channa dal,Grains
+600,poha,Grains
+617,barley,Grains
+630,baguette,Grains
+633,gnocchi,Grains
+635,hominy,Grains
+641,matzo meal,Grains
+154,pecans,Nuts
+155,pine nuts,Nuts
+156,sliced almonds,Nuts
+157,almonds,Nuts
+159,hazelnuts,Nuts
+160,peanuts,Nuts
+161,pistachios,Nuts
+162,"cashews, raw salted",Nuts
+163,sunflower kernels,Nuts
+177,"cashews, roasted",Nuts
+178,walnuts,Nuts
+179,chestnuts,Nuts
+182,chia seeds,Nuts
+370,slivered almonds,Nuts
+381,Marcona almonds,Nuts
+420,sesame seeds,Nuts
+428,pumpkin seeds,Nuts
+606,raw unsalted cashews,Nuts
+164,walnut oil,Oil
+166,avocado oil,Oil
+169,grapeseed oil,Oil
+170,olive oil,Oil
+176,sesame oil,Oil
+404,argan oil,Oil
+165,apple cider vinegar,Vinegar
+167,balsamic vinegar,Vinegar
+168,champagne vinegar,Vinegar
+171,red wine vinegar,Vinegar
+172,sherry vinegar,Vinegar
+173,white balsamic vinegar,Vinegar
+174,white distilled vinegar,Vinegar
+175,rice vinegar,Vinegar
+397,white wine vinegar,Vinegar
+290,rosemary,Herbs
+291,cilantro,Herbs
+292,thyme,Herbs
+293,basil,Herbs
+294,dill,Herbs
+295,chives,Herbs
+296,garlic chives,Herbs
+297,fenugreek leaves,Herbs
+298,oregano,Herbs
+299,bay leaves,Herbs
+300,sage,Herbs
+301,tarragon,Herbs
+302,mint,Herbs
+334,parsley,Herbs
+399,dried bay leaf,Herbs
+406,marjoram,Herbs
+458,savory,Herbs
+569,curry leaves,Herbs
+640,lemongrass,Herbs
+234,arugula,Vegetables
+235,asparagus,Vegetables
+236,avocado,Vegetables
+237,red bell pepper,Vegetables
+238,brussels sprouts,Vegetables
+239,cabbage,Vegetables
+240,carrots,Vegetables
+241,cauliflower,Vegetables
+242,celery,Vegetables
+243,cherry tomatoes,Vegetables
+244,cucumber,Vegetables
+245,daikon,Vegetables
+246,eggplant,Vegetables
+247,escarole,Vegetables
+248,fennel,Vegetables
+249,garlic,Vegetables
+250,ginger,Vegetables
+252,kale,Vegetables
+253,leeks,Vegetables
+255,potatoes,Vegetables
+256,baby potatoes,Vegetables
+258,radish,Vegetables
+259,rapini,Vegetables
+260,red onion,Vegetables
+261,scallions,Vegetables
+262,shallots,Vegetables
+263,snow peas,Vegetables
+264,spinach,Vegetables
+265,yellow squash,Vegetables
+266,sugar snap peas,Vegetables
+267,sweet potato,Vegetables
+268,swiss chard,Vegetables
+269,tomatillo,Vegetables
+270,tomato,Vegetables
+271,zucchini,Vegetables
+272,green bell pepper,Vegetables
+351,mung bean sprouts,Vegetables
+368,Roma tomatoes,Vegetables
+369,plum tomatoes,Vegetables
+372,white onion,Vegetables
+373,yellow onion,Vegetables
+402,pearl onions,Vegetables
+412,golden beets,Vegetables
+427,butternut squash,Vegetables
+431,Fresno chile,Vegetables
+432,black truffle,Vegetables
+433,white truffle,Vegetables
+440,endive,Vegetables
+447,radicchio,Vegetables
+448,sunchokes,Vegetables
+449,savoy cabbage,Vegetables
+513,enoki mushrooms,Vegetables
+514,burdock,Vegetables
+515,kabocha squash,Vegetables
+516,mizuna,Vegetables
+518,taro,Vegetables
+519,ube,Vegetables
+520,wasabi root,Vegetables
+522,shishito pepper,Vegetables
+546,Japanese eggplant,Vegetables
+547,Persian cucumber,Vegetables
+570,serrano chile,Vegetables
+610,acorn squash,Vegetables
+614,artichokes,Vegetables
+618,red beets,Vegetables
+619,bok choy,Vegetables
+620,broccoli,Vegetables
+621,purple cabbage,Vegetables
+636,sweet corn,Vegetables
+637,jalapeño,Vegetables
+638,lacinato kale,Vegetables
+643,crimini mushrooms,Vegetables
+644,shiitake mushrooms,Vegetables
+645,maitake mushrooms,Vegetables
+646,portabella mushrooms,Vegetables
+651,plantain,Vegetables
+652,poblano pepper,Vegetables
+654,russet potato,Vegetables
+657,turnips,Vegetables
+673,parsnips,Vegetables
+674,delicata squash,Vegetables
+675,watercress,Vegetables
+676,dandelion greens,Vegetables
+229,tamarind,Fruit
+273,apple,Fruit
+274,banana,Fruit
+275,strawberries,Fruit
+276,raspberries,Fruit
+277,blueberries,Fruit
+278,blackberries,Fruit
+279,green grapes,Fruit
+280,lemon,Fruit
+281,lime,Fruit
+282,orange,Fruit
+283,red pear,Fruit
+284,bosc pear,Fruit
+285,figs,Fruit
+286,mango,Fruit
+287,pineapple,Fruit
+288,cantaloupe,Fruit
+289,honeydew melon,Fruit
+333,lemon juice,Fruit
+385,cranberies,Fruit
+429,orange zest,Fruit
+430,lemon zest,Fruit
+439,apricot,Fruit
+441,pomegranate,Fruit
+442,nectarine,Fruit
+443,plums,Fruit
+517,satsuma orange,Fruit
+541,yuzu juice,Fruit
+575,coconut,Fruit
+624,cherries,Fruit
+629,medjool dates,Fruit
+634,red grapes,Fruit
+648,peach,Fruit
+658,watermelon,Fruit
+196,apricot preserves,Condiment
+197,fig preserves,Condiment
+198,maple syrup,Condiment
+199,lemon curd,Condiment
+202,nutella,Condiment
+204,gochujang,Condiment
+205,kewpie mayonnaise,Condiment
+209,dijon mustard,Condiment
+210,mayonnaise,Condiment
+211,sriracha,Condiment
+384,whole grain mustard,Condiment
+535,ponzu,Condiment
+537,shoyu,Condiment
+538,takuan,Condiment
+539,tamari,Condiment
+181,seaweed salad,Misc Grocery
+214,anchovies,Misc Grocery
+215,italian breadcrumbs,Misc Grocery
+216,panko breadcrumbs,Misc Grocery
+217,dolmas,Misc Grocery
+218,ginger-garlic paste,Misc Grocery
+219,honey,Misc Grocery
+220,kombu,Misc Grocery
+223,sardines,Misc Grocery
+224,tortellini,Misc Grocery
+225,ravioli,Misc Grocery
+226,seaweed snacks,Misc Grocery
+227,smoked trout,Misc Grocery
+228,tahini,Misc Grocery
+230,tempeh,Misc Grocery
+231,canned tuna in oil,Misc Grocery
+232,granola,Misc Grocery
+338,phyllo dough,Misc Grocery
+350,chicken broth,Misc Grocery
+352,Thai tamarind,Misc Grocery
+353,palm sugar,Misc Grocery
+354,dried shrimp,Misc Grocery
+361,tofu,Misc Grocery
+363,fish sauce,Misc Grocery
+364,oyster sauce,Misc Grocery
+365,water,Misc Grocery
+366,preserved daikon,Misc Grocery
+392,piquillo pepper,Misc Grocery
+408,walnut milk,Misc Grocery
+411,low-sodium chicken broth,Misc Grocery
+417,mirin,Misc Grocery
+418,white miso,Misc Grocery
+419,red miso,Misc Grocery
+423,espresso,Misc Grocery
+457,oil cured olives,Misc Grocery
+527,ao nori,Misc Grocery
+529,bonito flakes,Misc Grocery
+530,furikake,Misc Grocery
+540,wakame,Misc Grocery
+542,yuzu kosho,Misc Grocery
+543,dried shiitake mushrooms,Misc Grocery
+545,panko,Misc Grocery
+562,pomegranate molasses,Misc Grocery
+563,pomegranate juice,Misc Grocery
+565,pita bread,Misc Grocery
+605,nylon sev,Misc Grocery
+607,garlic-ginger paste,Misc Grocery
+612,almond butter,Misc Grocery
+627,coconut milk,Misc Grocery
+639,kimchi,Misc Grocery
+647,nori,Misc Grocery
+649,pesto,Misc Grocery
+665,nutritional yeast,Misc Grocery
+303,feta,Cheese
+304,Pecorino Romano,Cheese
+307,Pecorino Toscano,Cheese
+308,Parmigiano Reggiano,Cheese
+309,Brie,Cheese
+311,provolone,Cheese
+312,fresh mozzarella,Cheese
+313,Manchego,Cheese
+314,goat cheese,Cheese
+315,ricotta,Cheese
+316,ricotta salata,Cheese
+317,Taleggio,Cheese
+318,cream cheese,Cheese
+319,Camembert,Cheese
+320,Oaxaca cheese,Cheese
+323,Cotija,Cheese
+324,halloumi,Cheese
+325,cheddar,Cheese
+327,paneer,Cheese
+328,Queso Fresco,Cheese
+329,Asiago,Cheese
+330,buffalo mozzarella,Cheese
+331,Roquefort,Cheese
+422,mascarpone,Cheese
+434,burrata,Cheese
+476,Bitto,Cheese
+477,Cacio,Cheese
+479,rennet,Cheese
+481,Fontina,Cheese
+482,mozzarella,Cheese
+487,Provola,Cheese
+493,Scamorza,Cheese
+332,cumin seeds,Spices
+335,salt,Spices
+337,whole cinnamon,Spices
+371,piment d'Emplette,Spices
+375,paprika,Spices
+376,smoked paprika,Spices
+383,ground cinnamon,Spices
+386,coriander seeds,Spices
+387,fennel seeds,Spices
+389,kosher salt,Spices
+390,coarse sea salt,Spices
+391,cayenne pepper,Spices
+398,Calabrian pepper flakes,Spices
+400,juniper berries,Spices
+401,cloves,Spices
+403,black peppercorns,Spices
+407,dried marjoram,Spices
+416,poppy seeds,Spices
+450,dried chervil,Spices
+533,shichimi togarashi,Spices
+534,MSG (ajinomoto),Spices
+536,sansho pepper,Spices
+548,saffron,Spices
+549,dried fenugreek leaves,Spices
+550,turmeric powder,Spices
+551,dried rose petals,Spices
+552,dried mint,Spices
+553,nigella,Spices
+576,kashmiri chili powder,Spices
+577,mango powder,Spices
+578,dried curry leaves,Spices
+579,asafetida,Spices
+580,kala namak,Spices
+581,black cardamom,Spices
+582,ajwain,Spices
+584,green cardamom,Spices
+585,ceylon cinnamon,Spices
+587,coriander,Spices
+589,yellow mustard seeds,Spices
+590,brown mustard seeds,Spices
+591,nutmeg,Spices
+592,mace,Spices
+593,star anise,Spices
+611,allspice,Spices
+622,caraway seeds,Spices
+628,cream of tartar,Spices
+631,garam masala,Spices
+632,garlic powder,Spices
+662,dried dill,Spices
+663,celery seed,Spices
+664,dried lemon peel,Spices
+669,vanilla beans,Spices
+670,fine sea salt,Spices
+340,prosciutto,Meat
+341,pancetta,Meat
+342,rack of lamb,Meat
+343,guanciale,Meat
+344,chicken thighs,Meat
+345,chicken breasts,Meat
+346,whole chicken,Meat
+347,pork tenderloin,Meat
+348,leg of lamb,Meat
+349,lamb shoulder,Meat
+388,ground lamb,Meat
+496,duck breast,Meat
+498,coppa,Meat
+502,pheasant,Meat
+503,ground pork,Meat
+504,ground beef,Meat
+505,mortadella,Meat
+508,nduja,Meat
+509,soppressata,Meat
+510,speck,Meat
+511,ground veal,Meat
+512,veal,Meat
+613,Andouille sausage,Meat
+616,bacon,Meat
+626,chorizo (Mexican),Meat
+653,pork shoulder,Meat
+118,shrimp,Seafood
+119,flounder,Seafood
+120,mahi mahi,Seafood
+121,sockeye salmon,Seafood
+122,yellowfin tuna,Seafood
+459,lobster,Seafood
+460,branzino,Seafood
+461,squid,Seafood
+462,scallops,Seafood
+463,grouper,Seafood
+464,mussels,Seafood
+467,prawns,Seafood
+468,octopus,Seafood
+471,clams,Seafood
+472,red mullet,Seafood
+523,ikura,Seafood
+656,tilapia,Seafood
