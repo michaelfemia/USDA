@@ -1,0 +1,641 @@
+food_category_id,count,New
+9999,75,9999
+8802,8,Baking
+Baking,106,Baking
+Baking Accessories,33,Baking
+Baking Additives & Extracts,3797,Baking
+Baking Decorations & Dessert Toppings,17554,Baking
+Baking Needs,26,Baking
+Baking/Cooking Mixes (Frozen),1,Baking
+Baking/Cooking Mixes (Perishable),28,Baking
+Baking/Cooking Mixes (Shelf Stable),73,Baking
+Baking/Cooking Mixes/Supplies,4072,Baking
+Baking/Cooking Mixes/Supplies Variety Packs,1,Baking
+Baking/Cooking Supplies (Shelf Stable),39,Baking
+"Granulated, Brown & Powdered Sugar",8388,Baking
+Sugar And Flour,15,Baking
+Sugars/Sugar Substitute Products,64,Baking
+14,3255,Beverage
+7002,13,Beverage
+7004,3,Beverage
+7006,19,Beverage
+7008,9,Beverage
+7102,13,Beverage
+7104,12,Beverage
+7106,6,Beverage
+7202,14,Beverage
+7204,54,Beverage
+7206,19,Beverage
+7208,16,Beverage
+7220,25,Beverage
+7302,113,Beverage
+7304,45,Beverage
+7502,7,Beverage
+7504,12,Beverage
+7506,71,Beverage
+7702,2,Beverage
+7704,1,Beverage
+7802,5,Beverage
+7804,2,Beverage
+Breakfast Drinks,430,Beverage
+Drinks,9,Beverage
+"Drinks - Juices, Drinks and Cordials",26,Beverage
+Drinks - Soft Drinks,10,Beverage
+Drinks Flavoured - Ready to Drink,89,Beverage
+"Energy, Protein & Muscle Recovery Drinks",10493,Beverage
+"Fruit & Vegetable Juice, Nectars & Fruit Drinks",41255,Beverage
+Iced & Bottle Tea,9421,Beverage
+Liquid Water Enhancer,3291,Beverage
+Non Alcoholic Beverages  Not Ready to Drink,410,Beverage
+Non Alcoholic Beverages  Ready to Drink,7534,Beverage
+Non Alcoholic Beverages - Not Ready to Drink,107,Beverage
+Non Alcoholic Beverages - Ready to Drink,387,Beverage
+Non Alcoholic Beverages – Not Ready to Drink,48,Beverage
+Non Alcoholic Beverages – Ready to Drink,788,Beverage
+Other Drinks,19763,Beverage
+Plant Based Water,2942,Beverage
+Powdered Drinks,18604,Beverage
+Soda,32978,Beverage
+Specialty Formula Supplements,1155,Beverage
+Sport Drinks,3321,Beverage
+Tea Bags,6665,Beverage
+Water,26436,Beverage
+4202,118,Bread
+Bread,4002,Bread
+Bread - Incl. Buns And Rolls,16,Bread
+Bread (Frozen),215,Bread
+Bread (Shelf Stable),5,Bread
+Bread/Bakery Products Variety Packs,242,Bread
+Breads & Buns,47233,Bread
+Dried Breads (Shelf Stable),8,Bread
+Frozen Bread & Dough,4970,Bread
+Canned Fruit,15108,Canned Fruit
+Canned Vegetables,20601,Canned Vegetables
+Canned/Dried Veges,11,Canned Vegetables
+Cereal,36800,Cereal
+Cereal Products - Ready to Eat (Perishable),9,Cereal
+Cereal/Muesli Bars,469,Cereal
+Cereals Products - Not Ready to Eat (Shelf Stable),20,Cereal
+Cereals Products - Ready to Eat (Shelf Stable),512,Cereal
+Cheese/Cheese Substitutes,643,Cereal
+1602,58,Cheese
+1604,16,Cheese
+Cheese,81283,Cheese
+Cheese - Block,11,Cheese
+Cheese - Speciality ,27,Cheese
+Processed Cheese & Cheese Novelties,3,Cheese
+Coffee,1675,Coffee
+"Coffee - Instant, Roast and Ground",2,Coffee
+Coffee/Coffee Substitutes,1,Coffee
+Coffee/Tea/Substitutes,380,Coffee
+Confection & Snacks,65,Confectionery
+Confectionery,86,Confectionery
+Confectionery Products,1998,Confectionery
+1,10784,Dairy and Egg Products
+1002,7,Dairy and Egg Products
+1004,4,Dairy and Egg Products
+1006,4,Dairy and Egg Products
+1008,6,Dairy and Egg Products
+1202,10,Dairy and Egg Products
+1204,15,Dairy and Egg Products
+1206,11,Dairy and Egg Products
+1208,12,Dairy and Egg Products
+1402,13,Dairy and Egg Products
+1820,17,Dairy and Egg Products
+1822,14,Dairy and Egg Products
+2502,147,Dairy and Egg Products
+Butter & Spread,8356,Dairy and Egg Products
+Butter/Butter Substitutes,164,Dairy and Egg Products
+Cream,7796,Dairy and Egg Products
+Cream/Cream Substitutes,88,Dairy and Egg Products
+Dairy Foods/Yoghurts,34,Dairy and Egg Products
+Dairy/Egg Based Products / Meals,71,Dairy and Egg Products
+Eggs,4,Dairy and Egg Products
+Eggs & Egg Substitutes,3648,Dairy and Egg Products
+Eggs Products/Substitutes,1,Dairy and Egg Products
+Eggs/Eggs Substitutes,78,Dairy and Egg Products
+Margarine/Butter,1,Dairy and Egg Products
+Milk,22621,Dairy and Egg Products
+Milk Additives,9010,Dairy and Egg Products
+Milk/Cream,4,Dairy and Egg Products
+Milk/Cream - Shelf Stable,11,Dairy and Egg Products
+Milk/Milk Substitutes,50,Dairy and Egg Products
+Yogurt,36729,Dairy and Egg Products
+Yogurt (Perishable),54,Dairy and Egg Products
+Yogurt/Yogurt Substitutes,3003,Dairy and Egg Products
+Yogurt/Yogurt Substitutes (Perishable),7,Dairy and Egg Products
+3,345,Delete
+24,165,Delete
+25,583,Delete
+8002,14,Delete
+8004,12,Delete
+8006,14,Delete
+8008,19,Delete
+8010,10,Delete
+8804,10,Delete
+8806,36,Delete
+9002,14,Delete
+9004,13,Delete
+9006,14,Delete
+9007,12,Delete
+9008,11,Delete
+9010,2,Delete
+9012,11,Delete
+9202,6,Delete
+9204,1,Delete
+9402,18,Delete
+9404,51,Delete
+9602,1,Delete
+9802,18,Delete
+Alcohol,3783,Delete
+Alcoholic Beverages,78,Delete
+Amino Acid Supplements,1,Delete
+Antioxidant Supplements,8,Delete
+Antipasto,2,Delete
+Ayurvedic Supplements,1,Delete
+Baby/Infant  Foods/Beverages,153,Delete
+Baby/Infant – Foods/Beverages,16,Delete
+Beer,13,Delete
+Childcare,2,Delete
+Children's Natural Remedies,3,Delete
+Children's Nutritional Supplements,58,Delete
+Deli and Chilled Foods,2,Delete
+Digestive & Fiber Supplements,86,Delete
+Dips - Shelf Stable,2,Delete
+Doodles/ Puffs,1,Delete
+Drinks - Energy Drinks,2,Delete
+Drinks - Powdered,4,Delete
+Egg Based Products / Meals - Not Ready to Eat (Frozen),4,Delete
+Extracts/Salt/Meat Tenderisers (Shelf Stable),3,Delete
+Fatty Acid Supplements,20,Delete
+Food/Beverage/Tobacco Variety Packs,26,Delete
+Fresh Fruit and Vegetables,1,Delete
+"Fresh Meat, Poultry and Seafood",1,Delete
+Fresh Pasta,1,Delete
+Frozen Foods,7,Delete
+Frozen Snack,2,Delete
+Fruit Juice - Not Ready to Drink (Frozen),1,Delete
+Fruit Juice - Ready to Drink (Shelf Stable),1,Delete
+Fruit/Nuts/Seeds Mixes - Prepared/Processed (Shelf Stable),2,Delete
+Fruits  Unprepared/Unprocessed (Shelf Stable),7,Delete
+Gardening,2,Delete
+Grain Based Products / Meals,566,Delete
+Grain Based Products / Meals - Not Ready to Eat - Savoury (Frozen),3,Delete
+Grain Based Products / Meals - Not Ready to Eat - Savoury (Shelf Stable),5,Delete
+Grains/Cereal - Not Ready to Eat - (Shelf Stable),1,Delete
+Green Supplements,143,Delete
+Health Care,325,Delete
+Health Supplements and Vitamins,9,Delete
+Home Decoration & Supplies,8,Delete
+Ice-Cream/Block Single,1,Delete
+"Includes all products which can be described/observed as a healthy food alternative to meat vegetable and egg proteins. These products are non animal based and an imitation of meat products, meant to simulate the taste and mouthfeel of real meat but are normally made from a combination of non animal based ingredients. Includes products such as soya, fungus, beans, lentils, peas and chickpeas based products. These products must be frozen to extend their consumable life.",2,Delete
+"Includes any products that can be described/observed as a cereal combining all or some of the following ingredients: oats, muesli, wheat, rice, seeds, bran, fruit, nuts, cereal and honey, which has gone through further manufacturing processes such as cooking, milling, drying and reforming, which will require preparation/cooking prior to consumption. Includes products such as porridge oats, couscous and tapioca. These products have been treated or packaged in such a way as to extend their consumable life.",1,Delete
+"Includes any products that can be described/observed as a fine powder derived from grains, roots or tubers. These products have been treated or packaged in such a way as to extend their consumable life. Specifically excludes products such as Cornflour. Excludes products such as Whole Grains, Bread and Baking Mixes.",5,Delete
+"Includes any products that can be described/observed as a food made from ground pork, which may be prepared using a specific, regionally based process. The ground meat is mixed with other ingredients such as animal fat, salt, spices, herbs, vegetables or fruit and then typically packed in a casing, which may be link shaped or form a rope or ring, or sold without a casing such as bologna and some frankfurters. Some sausages are cooked during processing and may be preserved by curing, drying in cool air, or smoking.",4,Delete
+"Includes any products that can be described/observed as a food made from ground turkey meat, which may be prepared using a specific, regionally based process. The ground meat is mixed with other ingredients such as animal fat, salt, spices, herbs, vegetables or fruit and then typically packed in a casing, which may be link shaped or form a rope or ring, or sold without a casing such as bologna and some frankfurters. Some sausages are cooked during processing and may be preserved by curing, drying in cool air, or smoking.",1,Delete
+"Includes any products that can be described/observed as a frozen substance, which can be heated and combined with other ingredients, such as pasta, rice and chicken, to produce a specific recipe, such as Bolognese, Carbonara, Chicken Korma or Thai Curry.",16,Delete
+"Includes any products that can be described/observed as a leavened or unleavened, dough-based baked product. These products do not typically contain eggs and tend to have lower fat content than other dough products such as pastry. These products must be frozen to extend their consumable life. Includes such products as naan, chapatti, loaves, rolls, bagels, focaccia, ciabatta, baguette. Also includes rye bread, bread made from rice flour and part baked bread products.",1,Delete
+"Includes any products that can be described/observed as a leavened or unleavened, dough-based baked product. These products do not typically contain eggs and tend to have lower fat content than other dough products such as pastry. These products must be frozen to extend their consumable life. Includes such products as naan, chapatti, loaves, rolls, bagels, focaccia, ciabatta, baguette. Also includes rye bread, bread made from rice flour and part baked bread products. Excludes products such as Shelf-Stable and Perishable Bread Products, Dried Breads, Frozen Baking Mixes and Baking Supplies, and Pies and Pastries.",6,Delete
+"Includes any products that can be described/observed as a liquid food made from the stock of meat, fish and/or vegetables, which may also contain some small solid pieces of meat, fish and/or vegetables. These products must be frozen to extend their consumable life.",3,Delete
+"Includes any products that can be described/observed as a pastry, biscuit or crumble based product filled or topped with a mixture of shredded/sliced savoury ingredients, commonly including meat, vegetables, eggs or other additive. Products must be frozen to extend their consumable life. Excludes products such as Perishable and Shelf Stable Savoury Pies, Pastries, Pizzas and Quiches, Sweet Pies/Tarts, and Potato Topped Meat Pies.",5,Delete
+"Includes any products that can be described/observed as a prepared food normally consumed as the last course of a meal. These products have been packaged in such a way as to extend their consumable life. Products include desserts that are biscuit based, bread based, cake/sponge based, dairy based, pastry based and rice based. Excludes products such as Perishable and Frozen Desserts, Ice Cream, Pastries and Cakes, Yogurt.",1,Delete
+"Includes any products that can be described/observed as a quantity of perishable, pre-mixed dough, batter or powder or other ingredients that is specifically intended to produce bread, cakes, biscuits, desserts, or other products. Products may be ready to use (where no additional ingredients need to be added to the mix prior to use) or require the addition of wet ingredients such as water, milk, oil, fat or egg. These products must be refrigerated to extend their consumable life. Excludes products such as Soups, Frozen or Shelf-Stable Baking Mixes, all Part Baked and Baked Products.",5,Delete
+"Includes any products that can be described/observed as a quantity of shelf-stable, pre-mixed dough, batter or powder that is specifically intended to produce bread, cakes, biscuits, desserts, or other products. Products may be ready to use (where no additional ingredients need to be added to the mix prior to use) or require the addition of wet ingredients such as water, milk, oil, fat or egg. These products have been treated or packaged in such a way as to extend their consumable life. Excludes products such as Soups, Frozen or Perishable Baking Mixes, all Part Baked and Baked Products.",14,Delete
+"Includes any products that can be described/observed as a savoury dough-based not ready to eat, prepared/processed product, such as Pasta, Gnocchi, Noodles or Batter, with other ingredients, such as meat, dairy, eggs, fish, vegetables and/or seasoning. An optional seasoning/flavour packet may be present. These ingredients form a valuable part of the product, such as the meat/tomato sauce in Spaghetti Bolognaise, or cheese sauce in Macaroni and Cheese. They may or may not contain a sauce. These products are not ready to eat and require cooking prior to consumption. These products may have a main component which is considered a meal without any additional components. These products must be fro",12,Delete
+"Includes any products that can be described/observed as a substance which can be heated and combined with other ingredients, such as pasta, rice and chicken, to produce a specific recipe, such as Bolognese, Carbonara, Chicken Korma or Thai Curry. These products have been treated or packaged in such a way as to extend their consumable life. Excludes products such as Sauces Dipping and Condiments and Savoury Spreads and Marinades, Perishable and Frozen Sauces Cooking.",10,Delete
+"Includes any products that can be described/observed as frozen food made from the curd of milk, separated from the whey, sometimes fermented, and usually pressed, cooked, smoked, matured, or heated and mixed with artificial ingredients, such as emulsifiers, colourings and flavourings. These products must be frozen to extend their consumable life. These products include natural, processed cheese, cheese with added ingredients, such as herbs and nuts, in blocks, rolls, slices, grated, cubes, spreadable and portions. Excludes products such as Shelf Stable and Perishable Cheeses, all Cheese Substitutes and Cheese-Based/Flavoured Meals.",1,Delete
+"Includes any products that can be described/observed as frozen food made from the curd of milk, separated from the whey, sometimes fermented, and usually pressed, cooked, smoked, matured, or heated and mixed with artificial ingredients, such as emulsifiers, colourings and flavourings. These products must be frozen to extend their consumable life. These products include natural, processed cheese, cheese with added ingredients, such as herbs and nuts, in blocks, rolls, slices, grated, cubes, spreadable and portions.",23,Delete
+"Includes products from animals of the domestic pig ( Sus Scrofa Domesticus) that have been subjected to one or more further manufacturing processes such as being cooked, dried, cured, ground, or reformed.",11,Delete
+"Includes products from animals of the domestic pig ( Sus Scrofa Domesticus) that have been subjected to one or more further manufacturing processes such as being cooked, dried, cured, ground, or reformed. Specifically excludes Meat/Poultry Sausages - Prepared/Processed. Excludes Pork - Unprepared/Unprocessed.",6,Delete
+"Includes products from animals of the species Gallus gallus domesticus that have been subjected to one or more further manufacturing processes such as being cooked, dried, cured, ground, or reformed.",1,Delete
+"Includes products from animals of the species Gallus gallus domesticus that have been subjected to one or more further manufacturing processes such as being cooked, dried, cured, ground, or reformed. Specifically excludes Meat/Poultry Sausages - Prepared/Processed. Excludes Chicken - Unprepared/Unprocessed.",3,Delete
+"Includes products from animals of the species Meleagris gallopavo that have been subjected to one or more further manufacturing processes such as being cooked, dried, cured, ground, or reformed.",7,Delete
+"Includes products from mature animals of the genus Bos that have been subjected to one or more further manufacturing processes such as being cooked, dried, cured, ground, or reformed.",58,Delete
+"Includes products from mature animals of the genus Bos that have been subjected to one or more further manufacturing processes such as being cooked, dried, cured, ground, or reformed. Specifically excludes Meat/Poultry Sausages - Prepared/Processed. Excludes Beef - Unprepared/Unprocessed.",4,Delete
+Infant Formula,1,Delete
+Kitchen Supplies,6,Delete
+Media,5,Delete
+Minerals,5,Delete
+Miscellanious,187,Delete
+Noodles,1,Delete
+Nutritional Supplements,1,Delete
+Oral Hygiene Products,13,Delete
+Other Pet Food,1,Delete
+Other Sauces Dipping/Condiments/Savoury Toppings/Savoury Spreads/Marinades (Shelf Stable),2,Delete
+Packaged Water,1,Delete
+Pasta - Instant Meals,2,Delete
+Pastry,1,Delete
+Peppers,13,Delete
+Pickled Vegetables,4,Delete
+Pork - Prepared/Processed,2,Delete
+Potato - Instant Meals,1,Delete
+Ready To Drink,2,Delete
+"Ready-made combination meal, frozen dinner, frozen meal, or microwave meal is a pre-packaged frozen full meal.  The meal requires no preparation other than cooking and contains all the elements typically contained in a single-serving meal.  A ready-made meal (also known as a TV Dinner) must have a main component and at least one additional component such as a side item, a dessert and/or beverage. These products require cooking prior to consumption. These products must be frozen to extend their consumable life.",1,Delete
+S/O Fresh Fish Fillets/Steaks,1,Delete
+Salads,8,Delete
+Sauces - Cooking (Frozen),1,Delete
+Skin Care Preparations,1,Delete
+Snack Foods - Corn Chips,2,Delete
+Snack Foods - Dried Fruit,1,Delete
+Snack Foods - Multi Packs,1,Delete
+Sports and Weight Management,5,Delete
+Taco Shells,7,Delete
+"Tea - Bags, Loose Leaf, Speciality",2,Delete
+Tea and Infusions/Tisanes,3,Delete
+Tofu,1,Delete
+Vegetable Based Products / Meals - Not Ready to Eat (Shelf Stable),3,Delete
+Vegetables – Unprepared/Unprocessed (Shelf Stable),1,Delete
+Vitamins,47,Delete
+Vitamins/Minerals/Nutritional Supplements,1,Delete
+Weight Control,466,Delete
+Wrapped Snacks - Cereal,3,Delete
+8402,12,"Dressings, Dips, Condiments"
+8404,10,"Dressings, Dips, Condiments"
+8406,29,"Dressings, Dips, Condiments"
+8408,30,"Dressings, Dips, Condiments"
+8410,11,"Dressings, Dips, Condiments"
+8412,59,"Dressings, Dips, Condiments"
+"Condiments, Oils & Dressing",54,"Dressings, Dips, Condiments"
+Dips & Salsa,30462,"Dressings, Dips, Condiments"
+Dips/Hummus/Pate,12,"Dressings, Dips, Condiments"
+Dressings/Dips (Shelf Stable),18,"Dressings, Dips, Condiments"
+"Ketchup, Mustard, BBQ & Cheese Sauce",29521,"Dressings, Dips, Condiments"
+"Oriental, Mexican & Ethnic Sauces",15013,"Dressings, Dips, Condiments"
+Other Condiments,2465,"Dressings, Dips, Condiments"
+Other Sauces Dipping/Condiments/Savoury Toppings/Savoury Spreads/Marinades (Frozen),4,"Dressings, Dips, Condiments"
+"Pickles, Relishes and Vinegar",7,"Dressings, Dips, Condiments"
+Pickles/Relishes/Chutneys/Olives,269,"Dressings, Dips, Condiments"
+Salad Dressing & Mayonnaise,27670,"Dressings, Dips, Condiments"
+Sauces,38,"Dressings, Dips, Condiments"
+Sauces - Cooking (Shelf Stable),48,"Dressings, Dips, Condiments"
+Sauces- Cooking,7,"Dressings, Dips, Condiments"
+Sauces/Spreads/Dips/Condiments,4146,"Dressings, Dips, Condiments"
+Spreads,66,"Dressings, Dips, Condiments"
+Sweet Spreads,102,"Dressings, Dips, Condiments"
+20,4284,Grains
+4002,30,Grains
+4004,19,Grains
+Flour - Cereal/Pulse (Shelf Stable),17,Grains
+Flours & Corn Meal,6031,Grains
+Grains,15,Grains
+Grains/Cereal - Ready to Eat - (Shelf Stable),4,Grains
+Grains/Flour,712,Grains
+Other Grains & Seeds,5099,Grains
+Rice,8789,Grains
+Rice & Grains,3,Grains
+2,449,Herbs And Spices
+Herbal Supplements,77,Herbs And Spices
+Herbs & Spices,8125,Herbs And Spices
+Herbs And Spices,9,Herbs And Spices
+Herbs/Spices (Shelf Stable),6,Herbs And Spices
+Herbs/Spices/Extracts,1085,Herbs And Spices
+"Jam, Jelly & Fruit Spreads",13482,"Jam, Jelly & Fruit Spreads"
+16,6759,Legumes
+2802,75,Legumes
+Canned & Bottled Beans,15000,Legumes
+Chickpeas,10,Legumes
+Vegetable and Lentil Mixes,8049,Legumes
+5,2466,Meat
+7,962,Meat
+10,1384,Meat
+13,2290,Meat
+17,464,Meat
+2002,34,Meat
+2004,5,Meat
+2006,27,Meat
+2008,18,Meat
+2010,13,Meat
+2202,161,Meat
+2204,15,Meat
+2206,48,Meat
+2602,44,Meat
+2604,12,Meat
+2606,5,Meat
+2608,27,Meat
+Bacon,13,Meat
+"Bacon, Sausages & Ribs",6813,Meat
+Beef - Prepared/Processed,4,Meat
+Beef Sausages - Prepared/Processed,1,Meat
+Canned Meat,3569,Meat
+Chicken - Prepared/Processed,114,Meat
+Chicken - Unprepared/Unprocessed,11,Meat
+Fresh Chicken - Portions,1,Meat
+Fresh Chicken - Processed,4,Meat
+Fresh Chicken - Whole,1,Meat
+Fresh Meat,6,Meat
+"Frozen Bacon, Sausages & Ribs",1882,Meat
+Frozen Chicken - Portions,3,Meat
+Frozen Chicken - Processed,17,Meat
+Frozen Meat,12,Meat
+"Frozen Poultry, Chicken & Turkey",1819,Meat
+"Frozen Sausages, Hotdogs & Brats",1125,Meat
+Ham/Cold Meats,4,Meat
+Meat/Poultry/Other Animals  Prepared/Processed,9935,Meat
+Meat/Poultry/Other Animals  Unprepared/Unprocessed,4825,Meat
+Meat/Poultry/Other Animals - Prepared/Processed,1486,Meat
+Meat/Poultry/Other Animals - Unprepared/Unprocessed,150,Meat
+Meat/Poultry/Other Animals – Prepared/Processed,380,Meat
+Meat/Poultry/Other Animals – Unprepared/Unprocessed,412,Meat
+Meat/Poultry/Other Animals Sausages  Prepared/Processed,1620,Meat
+Meat/Poultry/Other Animals Sausages - Prepared/Processed,175,Meat
+Meat/Poultry/Other Animals Sausages – Prepared/Processed,112,Meat
+Other Frozen Meats,733,Meat
+Other Meats,9048,Meat
+"Pepperoni, Salami & Cold Cuts",20841,Meat
+Pork - Unprepared/Unprocessed,1,Meat
+Pork Sausages - Prepared/Processed,3,Meat
+"Poultry, Chicken & Turkey",3098,Meat
+Salami / Cured Meat,7,Meat
+"Sausages, Hotdogs & Brats",18850,Meat
+Sausages/Smallgoods,21,Meat
+Turkey - Prepared/Processed,2,Meat
+Turkey - Unprepared/Unprocessed,18,Meat
+Nut & Seed Butters,12412,Nut & Seed Butters
+12,4147,Nuts
+2804,78,Nuts
+Nuts/Seeds  Prepared/Processed,217,Nuts
+Nuts/Seeds  Unprepared/Unprocessed (Shelf Stable),10,Nuts
+Nuts/Seeds - Prepared/Processed,66,Nuts
+Nuts/Seeds - Prepared/Processed (Out of Shell),5,Nuts
+Nuts/Seeds - Prepared/Processed (Shelf Stable),20,Nuts
+Nuts/Seeds - Unprepared/Unprocessed (In Shell),1,Nuts
+Nuts/Seeds – Prepared/Processed,27,Nuts
+Nuts/Seeds – Unprepared/Unprocessed (Shelf Stable),1,Nuts
+4,3108,Oils
+8012,54,Oils
+Cooking Oils and Fats,5,Oils
+Fats Edible,63,Oils
+Oils Edible,449,Oils
+Oils Edible - Vegetable or Plant (Shelf Stable),1,Oils
+Vegetable & Cooking Oils,18433,Oils
+All Noodles,4249,Pasta & Noodles
+Pasta,3,Pasta & Noodles
+Pasta by Shape & Type,31275,Pasta & Noodles
+Pasta/Noodles,608,Pasta & Noodles
+Pasta/Noodles - Not Ready to Eat (Frozen),5,Pasta & Noodles
+Pastry Shells & Fillings,2325,Pasta & Noodles
+6,822,Prepared
+8,195,Prepared
+18,1005,Prepared
+21,312,Prepared
+22,81,Prepared
+3002,263,Prepared
+3004,131,Prepared
+3006,99,Prepared
+3102,24,Prepared
+3104,34,Prepared
+3202,135,Prepared
+3204,175,Prepared
+3206,16,Prepared
+3208,36,Prepared
+3402,44,Prepared
+3404,70,Prepared
+3406,25,Prepared
+3502,48,Prepared
+3504,7,Prepared
+3506,52,Prepared
+3602,91,Prepared
+3702,62,Prepared
+3703,29,Prepared
+3704,21,Prepared
+3706,47,Prepared
+3720,14,Prepared
+3722,22,Prepared
+3730,20,Prepared
+3740,63,Prepared
+3742,20,Prepared
+3744,11,Prepared
+3802,146,Prepared
+4204,37,Prepared
+4206,30,Prepared
+4208,7,Prepared
+4402,48,Prepared
+4404,54,Prepared
+4602,22,Prepared
+4604,20,Prepared
+4802,21,Prepared
+4804,26,Prepared
+6430,21,Prepared
+6432,18,Prepared
+6489,8,Prepared
+6802,48,Prepared
+6804,44,Prepared
+6806,56,Prepared
+Bread & Muffin Mixes,4928,Prepared
+Breakfast Cereals - Hot And Cold,32,Prepared
+Breakfast Foods,70,Prepared
+"Breakfast Sandwiches, Biscuits & Meals",1136,Prepared
+Canned Condensed Soup,4372,Prepared
+Canned Soup,10727,Prepared
+Chili & Stew,5330,Prepared
+Cooked & Prepared,5238,Prepared
+Crusts & Dough,6368,Prepared
+Deli Salads,5266,Prepared
+Dough Based Products / Meals,3159,Prepared
+Dough Based Products / Meals - Not Ready to Eat - Savoury (Frozen),37,Prepared
+Dough Based Products / Meals - Not Ready to Eat - Savoury (Shelf Stable),52,Prepared
+"Entrees, Sides & Small Meals",6222,Prepared
+Flavored Rice Dishes,3779,Prepared
+Frozen Appetizers & Hors D'oeuvres,22097,Prepared
+"Frozen Breakfast Sandwiches, Biscuits & Meals",4819,Prepared
+Frozen Dinners & Entrees,26485,Prepared
+Frozen Meals,17,Prepared
+"Frozen Pancakes, Waffles, French Toast & Crepes",4597,Prepared
+Frozen Patties and Burgers,5381,Prepared
+Frozen Prepared Sides,3843,Prepared
+Gravy Mix,3718,Prepared
+Lunch Snacks & Combinations,3919,Prepared
+Meal Replacement Supplements,828,Prepared
+Mexican Dinner Mixes,7252,Prepared
+Other Deli,11726,Prepared
+Other Soups,13318,Prepared
+"Pancakes, Waffles, French Toast & Crepes",634,Prepared
+Pasta Dinners,7278,Prepared
+Pizza Mixes & Other Dry Dinners,2343,Prepared
+Prepared Meals,51,Prepared
+Prepared Pasta & Pizza Sauces,16627,Prepared
+Prepared Soups,7422,Prepared
+Prepared Subs & Sandwiches,3830,Prepared
+Prepared Wraps and Burittos,2355,Prepared
+Prepared/Preserved Foods Variety Packs,368,Prepared
+Ready-Made Combination Meals,556,Prepared
+Ready-Made Combination Meals - Not Ready to Eat (Frozen),4,Prepared
+Salad Dressings,10,Prepared
+Sandwiches/Filled Rolls/Wraps,1479,Prepared
+Sandwiches/Filled Rolls/Wraps (Frozen),42,Prepared
+Soups - Prepared (Shelf Stable),43,Prepared
+Stuffing,1509,Prepared
+Sushi,1571,Prepared
+Sweet Bakery Products,2277,Prepared
+Vegetarian,10,Prepared
+9,8913,Produce
+11,14181,Produce
+6002,7,Produce
+6004,2,Produce
+6006,1,Produce
+6008,6,Produce
+6009,3,Produce
+6011,10,Produce
+6012,11,Produce
+6014,3,Produce
+6016,19,Produce
+6018,42,Produce
+6020,5,Produce
+6022,5,Produce
+6024,5,Produce
+6402,6,Produce
+6404,20,Produce
+6406,20,Produce
+6407,15,Produce
+6409,15,Produce
+6410,14,Produce
+6411,57,Produce
+6412,20,Produce
+6413,11,Produce
+6414,7,Produce
+6416,20,Produce
+6418,42,Produce
+6420,154,Produce
+Berries/Small Fruit,6,Produce
+Frozen Fruit,10,Produce
+Frozen Vegetables,20917,Produce
+Fruit,3,Produce
+Fruit  Prepared/Processed,1532,Produce
+Fruit - Prepared/Processed,93,Produce
+Fruit - Prepared/Processed (Frozen),4,Produce
+Fruit - Prepared/Processed (Shelf Stable),194,Produce
+Fruit – Prepared/Processed,44,Produce
+Fruits  Unprepared/Unprocessed (Frozen),10,Produce
+"Fruits, Vegetables & Produce",33,Produce
+Fruits/Vegetables/Nuts/Seeds Variety Packs,4,Produce
+Pre-Packaged Fruit & Vegetables,26280,Produce
+Vegetables,3,Produce
+Vegetables  Prepared/Processed,4413,Produce
+Vegetables - Prepared/Processed,616,Produce
+Vegetables - Prepared/Processed (Shelf Stable),60,Produce
+Vegetables - Unprepared/Unprocessed (Shelf Stable),3,Produce
+Vegetables – Prepared/Processed,305,Produce
+Vegetables – Unprepared/Unprocessed (Frozen),2,Produce
+Frozen Fruit & Fruit Juice Concentrates,11209,Produce - frozen
+Frozen Potato,5,Produce - frozen
+Vegetables  Unprepared/Unprocessed (Frozen),15,Produce - frozen
+Vegetables  Unprepared/Unprocessed (Shelf Stable),24,Produce - frozen
+Vegetables - Prepared/Processed (Frozen),17,Produce - frozen
+Vegetables - Unprepared/Unprocessed (Frozen),3,Produce - frozen
+15,2304,Seafood
+2402,109,Seafood
+2404,41,Seafood
+Aquatic Invertebrates/Fish/Shellfish/Seafood Combination,15,Seafood
+Canned Fish and Meat,61,Seafood
+Canned Seafood,5650,Seafood
+Canned Tuna,4795,Seafood
+Fish  Prepared/Processed,269,Seafood
+Fish  Unprepared/Unprocessed,1091,Seafood
+Fish - Prepared/Processed,30,Seafood
+Fish – Prepared/Processed,4,Seafood
+Fish – Unprepared/Unprocessed,545,Seafood
+Fish & Seafood,5050,Seafood
+Fish Substitutes,1,Seafood
+Frozen Fish & Seafood,16877,Seafood
+Frozen Fish/Seafood,104,Seafood
+Mussels,1,Seafood
+Seafood Miscellaneous,38,Seafood
+Shellfish Prepared/Processed,11,Seafood
+Shellfish Unprepared/Unprocessed,1482,Seafood
+Smoked fish,9,Seafood
+"Seasoning Mixes, Salts, Marinades & Tenderizers",34319,Seasonings
+Seasonings/Preservatives/Extracts Variety Packs,40,Seasonings
+19,412,Snacks & Desserts
+23,176,Snacks & Desserts
+5002,27,Snacks & Desserts
+5004,32,Snacks & Desserts
+5006,26,Snacks & Desserts
+5008,45,Snacks & Desserts
+5202,56,Snacks & Desserts
+5204,5,Snacks & Desserts
+5402,33,Snacks & Desserts
+5404,13,Snacks & Desserts
+5502,90,Snacks & Desserts
+5504,104,Snacks & Desserts
+5506,66,Snacks & Desserts
+5702,25,Snacks & Desserts
+5704,23,Snacks & Desserts
+5802,60,Snacks & Desserts
+5804,26,Snacks & Desserts
+5806,17,Snacks & Desserts
+Biscuits Chocolate,10,Snacks & Desserts
+Biscuits Cracker,12,Snacks & Desserts
+Biscuits Kids,1,Snacks & Desserts
+Biscuits Plain/Sweet,6,Snacks & Desserts
+Biscuits/Cookies,8783,Snacks & Desserts
+Biscuits/Cookies (Frozen),3,Snacks & Desserts
+Biscuits/Cookies (Shelf Stable),1048,Snacks & Desserts
+"Cake, Cookie & Cupcake Mixes",14799,Snacks & Desserts
+Cakes - Sweet (Frozen),156,Snacks & Desserts
+Cakes - Sweet (Shelf Stable),1,Snacks & Desserts
+Cakes and Slices,8,Snacks & Desserts
+"Cakes, Cupcakes, Snack Cakes",38176,Snacks & Desserts
+Cakes/Slices/Biscuits,1,Snacks & Desserts
+Candy,88871,Snacks & Desserts
+Chewing Gum & Mints,6503,Snacks & Desserts
+"Chips, Pretzels & Snacks",50996,Snacks & Desserts
+Chips/Crisps/Snack Mixes - Natural/Extruded (Shelf Stable),322,Snacks & Desserts
+Chocolate,41507,Snacks & Desserts
+Chocolate and Chocolate/Sugar Candy Combinations - Confectionery,1,Snacks & Desserts
+Cookies & Biscuits,53574,Snacks & Desserts
+Crackers & Biscotti,17403,Snacks & Desserts
+"Croissants, Sweet Rolls, Muffins & Other Pastries",11756,Snacks & Desserts
+Desserts (Frozen),28,Snacks & Desserts
+Desserts (Shelf Stable),2,Snacks & Desserts
+Desserts & Custard,7,Snacks & Desserts
+Desserts/Dessert Sauces/Toppings,1405,Snacks & Desserts
+Flavored Snack Crackers,3202,Snacks & Desserts
+"French Fries, Potatoes & Onion Rings",4295,Snacks & Desserts
+Frozen Desserts,3,Snacks & Desserts
+Frozen Pies/Savouries,4,Snacks & Desserts
+"Gelatin, Gels, Pectins & Desserts",4031,Snacks & Desserts
+Ice Cream & Frozen Yogurt,60793,Snacks & Desserts
+Ice Cream/Ice Novelties (Shelf Stable),30,Snacks & Desserts
+Ice-Cream Take Home,15,Snacks & Desserts
+Ice-Cream/Ice-Block Multi Pack,4,Snacks & Desserts
+Other Frozen Desserts,8213,Snacks & Desserts
+Other Snacks,31912,Snacks & Desserts
+Pastries/Pies/Pizzas,6,Snacks & Desserts
+Pies/Pastries - Sweet (Frozen),4,Snacks & Desserts
+Pies/Pastries - Sweet (Shelf Stable),216,Snacks & Desserts
+Pies/Pastries/Pizzas/Quiches - Savoury (Frozen),74,Snacks & Desserts
+Pizza,17253,Snacks & Desserts
+Popcorn (Shelf Stable),13,Snacks & Desserts
+"Popcorn, Peanuts, Seeds & Related Snacks",92148,Snacks & Desserts
+Puddings & Custards,5512,Snacks & Desserts
+Puddings and desserts,5,Snacks & Desserts
+Snack Foods - Cereal Snacks,8,Snacks & Desserts
+Snack Foods - Chips,15,Snacks & Desserts
+Snack Foods - Nuts,7,Snacks & Desserts
+Snack Foods - Other,31,Snacks & Desserts
+"Snack, Energy & Granola Bars",40136,Snacks & Desserts
+Snacks,6367,Snacks & Desserts
+Snacks Other,11,Snacks & Desserts
+Snacks Variety Packs,8,Snacks & Desserts
+Sugar Candy/Sugar Candy Substitutes Confectionery,3,Snacks & Desserts
+Wrapped Snacks - Fruit Bars,1,Snacks & Desserts
+Wrapped Snacks - Muesli Bars,8,Snacks & Desserts
+Wrapped Snacks - Nut Bars,6,Snacks & Desserts
+1404,22,Vegetarian
+2806,20,Vegetarian
+Meat Substitutes,11,Vegetarian
+Plant Based Milk,8106,Vegetarian
+Vegetable Based Products / Meals,1548,Vegetarian
+Vegetable Based Products / Meals - Not Ready to Eat (Frozen),227,Vegetarian
+Vegetarian Frozen Meats,1427,Vegetarian
+Vinegars/Cooking Wines,10,Vinegar
+Fruit/Nuts/Seeds Combination,93,Wholesome Snacks
+Wholesome Snacks,27014,Wholesome Snacks
+Honey,5412,Honey
+Other Cooking Sauces,8920,
+"Pickles, Olives, Peppers & Relishes",44432,
+Processed Cereal Products,8118,
+Savoury Bakery Products,2739,
+Syrups & Molasses,8433,
+Tomatoes,14564,
+,12655,
