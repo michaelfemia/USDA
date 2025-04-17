@@ -64,33 +64,33 @@ $(document).ready(function() {
 });//$(document).ready
 
 
-function NutritionFacts() {
-    // Debugging info
-    var Debug = "NutritionFacts(): Processing nutrition information.\n";
+function NutritionFacts(response) {
+    // Log the full response object
+    console.log("NutritionFacts(): Full Response:", response);
 
-    try {
-        // Ensure the response and response.nutrition exist
-        if (response && response.nutrition) {
-            Debug += "Nutrition information successfully accessed.\n";
+    // Ensure the response object exists
+    if (!response) {
+        console.error("NutritionFacts(): Missing response object.");
+        alert("Error: Missing response object from server.");
+        return;
+    }
 
-            // Access the nutrition array
-            var nutritionData = response.nutrition;
+    // Log and display the server's debugging message
+    if (response.message) {
+        console.log("Server Debugging Message:\n" + response.message);
+        alert("Server Debugging Message:\n" + response.message);
+    } else {
+        console.warn("NutritionFacts(): No message provided in the response.");
+        alert("Warning: No message provided in the server response.");
+    }
 
-            // Log the nutrition data for testing purposes
-            console.log("Nutrition Data:", nutritionData);
-
-            // Optional: Display the nutrition data in the UI
-            DisplayNutritionData(nutritionData);
-        } else {
-            Debug += "Error: Nutrition information is missing in the response.\n";
-            console.error("NutritionFacts Error: Response or nutrition data is undefined.");
-        }
-    } catch (error) {
-        Debug += "Error encountered while processing nutrition data.\n";
-        console.error("NutritionFacts Exception:", error);
-    } finally {
-        // Debugging info
-        console.log(Debug);
+    // Log and display the nutrition data
+    if (response.nutrition) {
+        console.log("Nutrition Data:", response.nutrition);
+        alert("Nutrition Data:\n" + JSON.stringify(response.nutrition, null, 2));
+    } else {
+        console.warn("NutritionFacts(): No nutrition data provided in the response.");
+        alert("Warning: No nutrition data provided in the server response.");
     }
 }
 
@@ -144,7 +144,6 @@ function UpdateRowOrder(container) {
       console.error('Error saving order:', textStatus, errorThrown);
     });
 }
-
 
 //Listener for all addition buttons (ingredient, instruction, tip)
 function AddRecipeComponent() {
@@ -358,7 +357,7 @@ function DeleteRecipeItem() {
 
         //NutritionFacts() to recalculate nutrient info when ingredients are deleted
         if (RecipeComponent === "recipeingredient") {
-          NutritionFacts();
+          NutritionFacts(response);
         }
       })
       .fail(function(jqXHR, textStatus, errorThrown) {
@@ -444,7 +443,6 @@ function ImageUploadHandler() {
     });
 }
 
-
 //Insert and update ingredients
 function InitializeSaveIngredientHandlers() {
     $(document).on('blur', '.IngredientRow', function (e) {
@@ -499,7 +497,7 @@ function InitializeSaveIngredientHandlers() {
 
                     // Call NutritionFacts() if Component is 1 or 2
                     if (Component === 1 || Component === 2) {
-                        NutritionFacts();
+                        NutritionFacts(response);
                     }
                 }
             }).fail(function(xhr, status, error) {
@@ -622,10 +620,24 @@ function SaveChange(data) {
         url: '/editor/ajax/savechanges.php',
         data: data
     }).done(function(response) {
-        // Access different elements of the response
-        console.log("Status: " + response.status);
-        console.log("Message: " + response.message);
-        console.log("Data: " + JSON.stringify(response.data)); 
+        // Consolidate debugging information
+        let debugInfo = "SaveChange Debugging Info:\n";
+        debugInfo += "Raw Response: " + JSON.stringify(response, null, 2) + "\n";
+        debugInfo += "Status: " + response?.status + "\n";
+        debugInfo += "Message: " + response?.message + "\n";
+        debugInfo += "Data: " + JSON.stringify(response?.data, null, 2) + "\n";
+
+        // Log all debugging information at once
+        console.log(debugInfo);
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        // Consolidate error debugging information
+        let errorDebugInfo = "SaveChange Error Debugging Info:\n";
+        errorDebugInfo += "AJAX Error: " + textStatus + "\n";
+        errorDebugInfo += "Error Thrown: " + errorThrown + "\n";
+        errorDebugInfo += "Response Text: " + jqXHR.responseText + "\n";
+
+        // Log all error debugging information at once
+        console.log(errorDebugInfo);
     });
 }
 
