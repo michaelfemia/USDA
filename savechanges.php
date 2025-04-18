@@ -16,6 +16,9 @@ $response = array(
 function NutrientCalculations($RecipeID) {
     global $mysqli, $response;
 
+    // Start reporting
+    $response['message'] .= "NutrientCalculations() called with RecipeID: $RecipeID\n";
+
     // Query to get all ingredients for the recipe
     $query = "SELECT tblRecipeIngredients.fkComponentID, tblRecipeIngredients.fldQuantity, tblRecipeIngredients.fkUnitID, tblIngredientUnits.fldUnit, tblIngredients.fldIngredientName, tblIngredients.fkUSDAFoodID 
               FROM tblRecipeIngredients
@@ -24,6 +27,12 @@ function NutrientCalculations($RecipeID) {
               WHERE tblRecipeIngredients.fldType=1 AND tblRecipeIngredients.fkRecipeID=$RecipeID";
     $result = $mysqli->query($query);
 
+    if (!$result) {
+        $response['message'] .= "Error fetching ingredients for RecipeID $RecipeID: " . $mysqli->error . "\n";
+        return;
+    }
+
+    $response['message'] .= "Ingredients fetched successfully for RecipeID $RecipeID.\n";
     $nutrients = [];
     $totalWeight = 0;
 
@@ -34,23 +43,40 @@ function NutrientCalculations($RecipeID) {
         $unitID = $ingredient['fkUnitID'];
         $USDAFoodID = $ingredient['fkUSDAFoodID'];
 
+        $response['message'] .= "Processing Ingredient ID $ingredientID (USDAFoodID: $USDAFoodID)  \n";
+
         // Convert quantity to grams
         $quantityInGrams = ConvertToGrams($quantity, $unitID);
+        $response['message'] .= "Converted quantity: $quantity $unitID -> $quantityInGrams grams   \n";
 
         // Query to get nutrient information for the ingredient
-        $nutrientQuery = "SELECT tblFoodNutrient.fldAmount, tblFoodNutrient.fldPercentDV, tblNutrients.fldNutrientName, tblNutrients.fldUnit, tblNutrients.fldLabelName
-                          FROM tblFoodNutrient
-                          JOIN tblNutrients on tblFoodNutrient.fkNutrientID=tblNutrients.pkNutrientID
-                          WHERE tblFoodNutrient.fkFoodID=$USDAFoodID
-                          ORDER BY tblNutrients.fldLabelRank ASC";
+		$nutrientQuery = "SELECT tblFoodNutrient.fldAmount, 
+								 tblNutrients.fldNutrientName, 
+								 tblNutrients.fldNutrientUnit, 
+								 tblNutrients.fldLabelName, 
+								 tblNutrients.fldLabelRank
+						  FROM tblFoodNutrient
+						  JOIN tblNutrients ON tblFoodNutrient.fkNutrientID = tblNutrients.pkNutrientID
+						  WHERE tblFoodNutrient.fkFoodID = $USDAFoodID
+							AND tblNutrients.fldLabelName IS NOT NULL
+							AND tblNutrients.fldLabelName != ''
+						  ORDER BY tblNutrients.fldLabelRank ASC";
         $nutrientResult = $mysqli->query($nutrientQuery);
+
+        if (!$nutrientResult) {
+            $response['message'] .= "Error fetching nutrients for USDAFoodID $USDAFoodID: " . $mysqli->error . "\n";
+            continue;
+        }
+
+        $response['message'] .= "Nutrients fetched successfully for USDAFoodID $USDAFoodID.   \n";
 
         // Process each nutrient
         while ($nutrient = $nutrientResult->fetch_assoc()) {
             $amount = $nutrient['fldAmount'];
             $nutrientName = $nutrient['fldNutrientName'];
-            $unit = $nutrient['fldUnit'];
+            $unit = $nutrient['fldNutrientUnit'];
             $labelName = $nutrient['fldLabelName'];
+            $rank = $nutrient['fldLabelRank']; // Retrieve rank here
 
             // Scale the amount based on the quantity in grams
             $scaledAmount = ($amount / 100) * $quantityInGrams;
@@ -60,7 +86,7 @@ function NutrientCalculations($RecipeID) {
                 $nutrients[$labelName] = [
                     'nutrient' => $labelName,
                     'totalAmount' => 0,
-                    'rank' => $nutrient['fldLabelRank'],
+                    'rank' => $rank, // Add rank to the nutrient array
                     'unit' => $unit
                 ];
             }
@@ -73,18 +99,31 @@ function NutrientCalculations($RecipeID) {
     // Handle recipes-as-ingredients (fldType=2)
     $recipeQuery = "SELECT fkComponentID, fldQuantity, fkUnitID FROM tblRecipeIngredients WHERE fldType=2 AND fkRecipeID=$RecipeID";
     $recipeResult = $mysqli->query($recipeQuery);
+    if (!$recipeResult) {
+        $response['message'] .= "Error fetching recipes-as-ingredients for RecipeID $RecipeID: " . $mysqli->error . "\n";
+        return;
+    }
+
     while ($recipeIngredient = $recipeResult->fetch_assoc()) {
         $componentRecipeID = $recipeIngredient['fkComponentID'];
         $quantity = $recipeIngredient['fldQuantity'];
         $unitID = $recipeIngredient['fkUnitID'];
 
+        $response['message'] .= "Processing Recipe-as-Ingredient ID $componentRecipeID\n";
+
         // Get the nutrition array from the component recipe
         $nutritionQuery = "SELECT fldNutrition FROM tblRecipes WHERE RecipeID=$componentRecipeID";
         $nutritionResult = $mysqli->query($nutritionQuery);
+        if (!$nutritionResult) {
+            $response['message'] .= "Error fetching nutrition for RecipeID $componentRecipeID: " . $mysqli->error . "\n";
+            continue;
+        }
+
         $componentNutrition = json_decode($nutritionResult->fetch_assoc()['fldNutrition'], true);
 
         // Convert the quantity to grams
         $quantityInGrams = ConvertToGrams($quantity, $unitID);
+        $response['message'] .= "Converted quantity for Recipe-as-Ingredient: $quantity $unitID -> $quantityInGrams grams\n";
 
         // Process each nutrient in the component recipe
         foreach ($componentNutrition as $nutrient) {
@@ -108,6 +147,7 @@ function NutrientCalculations($RecipeID) {
     }
 
     // Add total weight to response
+    $response['message'] .= "Total Weight after processing ingredients: $totalWeight grams\n";
     $response['nutrition']['totalWeight'] = $totalWeight;
 
     // Add nutrient information to response
@@ -117,6 +157,12 @@ function NutrientCalculations($RecipeID) {
     $nutritionJson = json_encode($response['nutrition']);
     $updateQuery = "UPDATE tblRecipes SET fldNutrition='$nutritionJson' WHERE RecipeID=$RecipeID";
     $mysqli->query($updateQuery);
+
+    if ($mysqli->error) {
+        $response['message'] .= "Error updating RecipeID $RecipeID with nutrition information: " . $mysqli->error . "\n";
+    } else {
+        $response['message'] .= "Nutrition information updated successfully for RecipeID $RecipeID.\n";
+    }
 }
 
 function ConvertToGrams($quantity, $unitID) {
@@ -199,7 +245,7 @@ try{
 				if (!$STMT) {
 					error_log("Prepare failed: " . $mysqli->error);
 					$response['status'] = 'error';
-					$response['message'] = 'Prepare failed: ' . $mysqli->error;
+					$response['message'] .= 'Prepare failed: ' . $mysqli->error;
 				} else {
 					$paramType = ($column === 'fkCuisineID') ? 'ii' : 'si';
 					$STMT->bind_param($paramType, $newText, $RecipeID);
@@ -207,10 +253,10 @@ try{
 					if (!$STMT->execute()) {
 						error_log("Execute failed: " . $STMT->error);
 						$response['status'] = 'error';
-						$response['message'] = 'Execute failed: ' . $STMT->error;
+						$response['message'] .= 'Execute failed: ' . $STMT->error;
 					} else {
 						$response['status'] = 'success';
-						$response['message'] = 'Changes to '.$column.' saved successfully.';
+						$response['message'] .= 'Changes to '.$column.' saved successfully.';
 						if ($column === 'fkCuisineID') {
 							error_log("Cuisine update successful");
 						}
@@ -220,7 +266,7 @@ try{
 				}
 			} else {
 				$response['status'] = 'error';
-				$response['message'] = 'Invalid column mapping.';
+				$response['message'] .= 'Invalid column mapping.';
 			}
 		}	
 		
@@ -228,7 +274,7 @@ try{
 		/////     IMAGE UPLOADS     /////
 		///////////////////////////////*/
 		if ($_POST['Action'] == 'UpdateImage') {
-			 $response['message'] = 'SaveChanges:UpdateImage.';
+			 $response['message'] .= 'SaveChanges:UpdateImage.';
 			if (isset($_FILES['image'])) {
 				$file = $_FILES['image'];
 				$fileName = $file['name'];
@@ -476,7 +522,7 @@ try{
 			$UniqueID = $_POST['UniqueID'];
 		
 			if (empty($RecipeComponent) || empty($UniqueID)) {
-				$response['message'] = "Failed to delete {$RecipeComponent} component with ID of {$UniqueID}";
+				$response['message'] .= "Failed to delete {$RecipeComponent} component with ID of {$UniqueID}";
 				$response['status'] = 'failed';
 				echo json_encode($response);
 				exit;
@@ -496,7 +542,7 @@ try{
 					$PrimaryKey = 'pkRecipeTipID';
 					break;
 				default:
-					$response['message'] = 'Invalid Recipe Component';
+					$response['message'] .= 'Invalid Recipe Component';
 					$response['status'] = 'failed';
 					echo json_encode($response);
 					exit;
@@ -507,11 +553,11 @@ try{
 			$STMT->bind_param('i', $UniqueID);
 		
 			if ($STMT->execute()) {
-				$response['message'] = strtoupper($RecipeComponent) . ' deleted successfully';
+				$response['message'] .= strtoupper($RecipeComponent) . ' deleted successfully';
 				$response['status'] = 'success';
 				if($RecipeComponent=="recipeingredient"){NutrientCalculations($RecipeID);}//Recalculate nutrient information.
 			} else {
-				$response['message'] = "Failed to delete {$RecipeComponent}";
+				$response['message'] .= "Failed to delete {$RecipeComponent}";
 				$response['status'] = 'failed';
 			}
 		}//if$_POST['Action']== 'Delete'])
