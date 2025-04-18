@@ -245,7 +245,7 @@ try{
 				if (!$STMT) {
 					error_log("Prepare failed: " . $mysqli->error);
 					$response['status'] = 'error';
-					$response['message'] .= 'Prepare failed: ' . $mysqli->error;
+					$response['message'] = 'Prepare failed: ' . $mysqli->error;
 				} else {
 					$paramType = ($column === 'fkCuisineID') ? 'ii' : 'si';
 					$STMT->bind_param($paramType, $newText, $RecipeID);
@@ -253,10 +253,10 @@ try{
 					if (!$STMT->execute()) {
 						error_log("Execute failed: " . $STMT->error);
 						$response['status'] = 'error';
-						$response['message'] .= 'Execute failed: ' . $STMT->error;
+						$response['message'] = 'Execute failed: ' . $STMT->error;
 					} else {
 						$response['status'] = 'success';
-						$response['message'] .= 'Changes to '.$column.' saved successfully.';
+						$response['message'] = 'Changes to '.$column.' saved successfully.';
 						if ($column === 'fkCuisineID') {
 							error_log("Cuisine update successful");
 						}
@@ -266,7 +266,7 @@ try{
 				}
 			} else {
 				$response['status'] = 'error';
-				$response['message'] .= 'Invalid column mapping.';
+				$response['message'] = 'Invalid column mapping.';
 			}
 		}	
 		
@@ -274,7 +274,7 @@ try{
 		/////     IMAGE UPLOADS     /////
 		///////////////////////////////*/
 		if ($_POST['Action'] == 'UpdateImage') {
-			 $response['message'] .= 'SaveChanges:UpdateImage.';
+			 $response['message'] = 'SaveChanges:UpdateImage.';
 			if (isset($_FILES['image'])) {
 				$file = $_FILES['image'];
 				$fileName = $file['name'];
@@ -522,7 +522,7 @@ try{
 			$UniqueID = $_POST['UniqueID'];
 		
 			if (empty($RecipeComponent) || empty($UniqueID)) {
-				$response['message'] .= "Failed to delete {$RecipeComponent} component with ID of {$UniqueID}";
+				$response['message'] = "Failed to delete {$RecipeComponent} component with ID of {$UniqueID}";
 				$response['status'] = 'failed';
 				echo json_encode($response);
 				exit;
@@ -542,7 +542,7 @@ try{
 					$PrimaryKey = 'pkRecipeTipID';
 					break;
 				default:
-					$response['message'] .= 'Invalid Recipe Component';
+					$response['message'] = 'Invalid Recipe Component';
 					$response['status'] = 'failed';
 					echo json_encode($response);
 					exit;
@@ -553,11 +553,11 @@ try{
 			$STMT->bind_param('i', $UniqueID);
 		
 			if ($STMT->execute()) {
-				$response['message'] .= strtoupper($RecipeComponent) . ' deleted successfully';
+				$response['message'] = strtoupper($RecipeComponent) . ' deleted successfully';
 				$response['status'] = 'success';
 				if($RecipeComponent=="recipeingredient"){NutrientCalculations($RecipeID);}//Recalculate nutrient information.
 			} else {
-				$response['message'] .= "Failed to delete {$RecipeComponent}";
+				$response['message'] = "Failed to delete {$RecipeComponent}";
 				$response['status'] = 'failed';
 			}
 		}//if$_POST['Action']== 'Delete'])
