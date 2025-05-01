@@ -63,37 +63,6 @@ $(document).ready(function() {
 		
 });//$(document).ready
 
-
-function NutritionFacts(response) {
-    // Log the full response object
-    console.log("NutritionFacts(): Full Response:", response);
-
-    // Ensure the response object exists
-    if (!response) {
-        console.error("NutritionFacts(): Missing response object.");
-        alert("Error: Missing response object from server.");
-        return;
-    }
-
-    // Log and display the server's debugging message
-    if (response.message) {
-        console.log("Server Debugging Message:\n" + response.message);
-        alert("Server Debugging Message:\n" + response.message);
-    } else {
-        console.warn("NutritionFacts(): No message provided in the response.");
-        alert("Warning: No message provided in the server response.");
-    }
-
-    // Log and display the nutrition data
-    if (response.nutrition) {
-        console.log("Nutrition Data:", response.nutrition);
-        alert("Nutrition Data:\n" + JSON.stringify(response.nutrition, null, 2));
-    } else {
-        console.warn("NutritionFacts(): No nutrition data provided in the response.");
-        alert("Warning: No nutrition data provided in the server response.");
-    }
-}
-
 function DragAndDropSorting() {
   const containers = document.querySelectorAll('.DataRowContainer');
   
@@ -145,6 +114,7 @@ function UpdateRowOrder(container) {
     });
 }
 
+
 //Listener for all addition buttons (ingredient, instruction, tip)
 function AddRecipeComponent() {
   document.addEventListener('click', function(event) {
@@ -169,6 +139,7 @@ function AddRecipeComponent() {
     }
   });
 }
+
 
 //Add new ingredient rows
 function AddIngredient(NewOrder,Component) {
@@ -220,6 +191,7 @@ function AddIngredient(NewOrder,Component) {
 	}
 	
 }
+
 
 //Add new instructions and tips
 function AddEditableRow(ComponentType, NewOrder) {
@@ -333,6 +305,7 @@ function UpdateEditableRows() {
   });
 }
 
+
 //Delete tips, instructions, and ingredient rows
 function DeleteRecipeItem() {
   $('.DataRow button.Delete').on('click', function() {
@@ -354,11 +327,6 @@ function DeleteRecipeItem() {
       .done(function(response) {
         console.log('Delete successful:', response);
         $DataRow.remove(); // Remove the row from the DOM
-
-        //NutritionFacts() to recalculate nutrient info when ingredients are deleted
-        if (RecipeComponent === "recipeingredient") {
-          NutritionFacts(response);
-        }
       })
       .fail(function(jqXHR, textStatus, errorThrown) {
         console.error('Delete failed:', textStatus, errorThrown);
@@ -366,6 +334,7 @@ function DeleteRecipeItem() {
       });
   });
 }
+
 
 function ImageUploadHandler() {
     let isUploading = false;
@@ -443,6 +412,7 @@ function ImageUploadHandler() {
     });
 }
 
+
 //Insert and update ingredients
 function InitializeSaveIngredientHandlers() {
     $(document).on('blur', '.IngredientRow', function (e) {
@@ -450,69 +420,66 @@ function InitializeSaveIngredientHandlers() {
         var $row = $(this).closest('.IngredientRow');
         var isNewIngredient = $row.hasClass('NewIngredientRow');
         var Action = isNewIngredient ? "InsertIngredient" : "UpdateIngredient";
-        var Component = parseInt($row.data('subtype'), 10);
-                
+		var Component = parseInt($row.data('subtype'), 10);
+		        
         //Updates
         var RecipeIngredientID="";
         if (Action === "UpdateIngredient") {
-            RecipeIngredientID=$row.data('uniqueid');
-        }
-        
-        if(Component === 1 || Component === 2){
-            var Quantity = parseFloat($row.find('input.IngredientQuantity').val().trim());
-            var Unit = parseInt($row.find('select.IngredientUnitMenu').val(), 10);
-            if (isNaN(Unit) || Unit === null || Unit === undefined){Unit = 0;}// for cases like "1 apple" etc.
-            var IngredientID = parseInt($row.find('input.IngredientName').attr('data-ingredient-id'), 10);
-        }
-        
-        var PrepNotes = $row.find('input.IngredientPrepNotes').val();
-        var Order = parseInt($row.find('input.RowListOrder:hidden').val(), 10);
+			RecipeIngredientID=$row.data('uniqueid');
+		}
+		
+		if(Component === 1 || Component === 2){
+			var Quantity = parseFloat($row.find('input.IngredientQuantity').val().trim());
+			var Unit = parseInt($row.find('select.IngredientUnitMenu').val(), 10);
+			if (isNaN(Unit) || Unit === null || Unit === undefined){Unit = 0;}// for cases like "1 apple" etc.
+			var IngredientID = parseInt($row.find('input.IngredientName').attr('data-ingredient-id'), 10);
+		}
+		
+		var PrepNotes = $row.find('input.IngredientPrepNotes').val();
+		var Order = parseInt($row.find('input.RowListOrder:hidden').val(), 10);
         
         // Check if Quantity, Unit, and IngredientID are set
         if ( ((Component === 1 || Component === 2) && (Quantity && IngredientID)) || (Component === 3 && PrepNotes) ){
-            Debug+=Action+"\n";    
-            SaveChange({
-            Action: Action,
-            Component: Component,
-            Quantity: Quantity,
-            UnitID: Unit,
-            IngredientID: IngredientID,
-            PrepNotes: PrepNotes,
-            Order: Order,
-            RecipeIngredientID: RecipeIngredientID
-            }).done(function(response) {
-                //var result = JSON.parse(response);
-                if (response.status === 'success') {
-                    Debug+="\n Javascript received successful query report \n";
-                    if (Action === "InsertIngredient") {
-                        DragAndDropSorting();
-                                                
-                        //The new row doesn't have a RecipeIngredientID yet
-                        var NewRecipeIngredientID= response.data;
-                        $row.attr('data-uniqueid', NewRecipeIngredientID);
-                        
-                        //Remove the NewIngredientRow class
-                        $row.removeClass('NewIngredientRow');
-                    }
+			Debug+=Action+"\n";	
+			SaveChange({
+			Action: Action,
+			Component: Component,
+			Quantity: Quantity,
+			UnitID: Unit,
+			IngredientID: IngredientID,
+			PrepNotes: PrepNotes,
+			Order: Order,
+			RecipeIngredientID: RecipeIngredientID
+			}).done(function(response) {
+				//var result = JSON.parse(response);
+				if (response.status === 'success') {
+					Debug+="\n Javascript received successful query report \n";
+					if (Action === "InsertIngredient") {
+						DragAndDropSorting();
+												
+						//The new row doesn't have a RecipeIngredientID yet
+						var NewRecipeIngredientID= response.data;
+						$row.attr('data-uniqueid', NewRecipeIngredientID);
+						
+						//Remove the NewIngredientRow class
+						$row.removeClass('NewIngredientRow');
+					}
+					
+				}
+			}).fail(function(xhr, status, error) {
+				console.error('JS: Save failed:', error);
+				if (xhr.responseText) {
+					try {
+						var response = JSON.parse(xhr.responseText);
+						if (response.error) {
+							console.error('PHP Error:', response.error);
+						}
+					} catch (e) {
+						console.error('Error parsing response:', xhr.responseText);
+					}
+				}
+			});
 
-                    // Call NutritionFacts() if Component is 1 or 2
-                    if (Component === 1 || Component === 2) {
-                        NutritionFacts(response);
-                    }
-                }
-            }).fail(function(xhr, status, error) {
-                console.error('JS: Save failed:', error);
-                if (xhr.responseText) {
-                    try {
-                        var response = JSON.parse(xhr.responseText);
-                        if (response.error) {
-                            console.error('PHP Error:', response.error);
-                        }
-                    } catch (e) {
-                        console.error('Error parsing response:', xhr.responseText);
-                    }
-                }
-            });
 
         } else {
             Debug+="InitializeSaveIngredientHandlers(): Quantity, Unit, or IngredientID is not set. Save not executed.\n\n";
@@ -521,6 +488,7 @@ function InitializeSaveIngredientHandlers() {
         //console.log(Debug);
     });
 }
+
 
 function InitializeIngredientAutocomplete(selector) {
     $(selector).each(function () {
@@ -581,6 +549,7 @@ function InitializeIngredientAutocomplete(selector) {
     });
 }
 
+
 //Choose Plural or Singular ingredient units
 function ToggleIngredientUnits() {
   const IngredientsListDiv = document.getElementById('IngredientsList');
@@ -610,6 +579,7 @@ function ToggleIngredientUnits() {
   });
 }
 
+
 //AJAX call function
 function SaveChange(data) {
     // Ensure recipeID is always included
@@ -620,26 +590,13 @@ function SaveChange(data) {
         url: '/editor/ajax/savechanges.php',
         data: data
     }).done(function(response) {
-        // Consolidate debugging information
-        let debugInfo = "SaveChange Debugging Info:\n";
-        debugInfo += "Raw Response: " + JSON.stringify(response, null, 2) + "\n";
-        debugInfo += "Status: " + response?.status + "\n";
-        debugInfo += "Message: " + response?.message + "\n";
-        debugInfo += "Data: " + JSON.stringify(response?.data, null, 2) + "\n";
-
-        // Log all debugging information at once
-        console.log(debugInfo);
-    }).fail(function(jqXHR, textStatus, errorThrown) {
-        // Consolidate error debugging information
-        let errorDebugInfo = "SaveChange Error Debugging Info:\n";
-        errorDebugInfo += "AJAX Error: " + textStatus + "\n";
-        errorDebugInfo += "Error Thrown: " + errorThrown + "\n";
-        errorDebugInfo += "Response Text: " + jqXHR.responseText + "\n";
-
-        // Log all error debugging information at once
-        console.log(errorDebugInfo);
+        // Access different elements of the response
+        console.log("Status: " + response.status);
+        console.log("Message: " + response.message);
+        console.log("Data: " + JSON.stringify(response.data)); 
     });
 }
+
 
 function InitializeEditableFields(selector) {
     $(selector).on('keypress blur', function(e) {
@@ -665,6 +622,7 @@ function InitializeEditableFields(selector) {
         }
     });
 }
+
 
 
 //Change cuisine

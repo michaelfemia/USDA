@@ -4,13 +4,14 @@ ini_set('display_errors', 1);
 ob_start();
 include '../../connect.php';
 
+echo "TEST";
+
 //Prepare a response to return to JavaScript
 $response = array(
 	'status' => 'success',
 	'message' => 'SaveChanges Response: ',
 	'data' => null,
 	'nutrition' => null,
-	'error' => null
 );	
 
 function NutrientCalculations($RecipeID) {
@@ -20,19 +21,27 @@ function NutrientCalculations($RecipeID) {
     $response['message'] .= "NutrientCalculations() called with RecipeID: $RecipeID\n";
 
     // Query to get all ingredients for the recipe
-    $query = "SELECT tblRecipeIngredients.fkComponentID, tblRecipeIngredients.fldQuantity, tblRecipeIngredients.fkUnitID, tblIngredientUnits.fldUnit, tblIngredients.fldIngredientName, tblIngredients.fkUSDAFoodID 
+    $query = "SELECT tblRecipeIngredients.fkComponentID, 
+					 tblRecipeIngredients.fldQuantity, 
+					 tblRecipeIngredients.fkUnitID, 
+					 tblIngredientUnits.fldUnit, 
+					 tblIngredients.fldIngredientName, 
+					 tblIngredients.fkUSDAFoodID 
               FROM tblRecipeIngredients
               JOIN tblIngredients on tblRecipeIngredients.fkComponentID=tblIngredients.pkIngredientID
               JOIN tblIngredientUnits on tblRecipeIngredients.fkUnitID=tblIngredientUnits.pkUnitID
-              WHERE tblRecipeIngredients.fldType=1 AND tblRecipeIngredients.fkRecipeID=$RecipeID";
-    $result = $mysqli->query($query);
+              WHERE tblRecipeIngredients.fldType=1
+			  AND tblIngredients.fkUSDAFoodID > 5
+			  AND tblRecipeIngredients.fkRecipeID=$RecipeID";
+    $response['message'] .= "Executing ingredient query: $query\n";
+	$result = $mysqli->query($query);
 
     if (!$result) {
         $response['message'] .= "Error fetching ingredients for RecipeID $RecipeID: " . $mysqli->error . "\n";
         return;
     }
 
-    $response['message'] .= "Ingredients fetched successfully for RecipeID $RecipeID.\n";
+    $response['message'] .= "Ingredients fetched successfully for RecipeID $RecipeID.\n\n";
     $nutrients = [];
     $totalWeight = 0;
 
@@ -43,24 +52,25 @@ function NutrientCalculations($RecipeID) {
         $unitID = $ingredient['fkUnitID'];
         $USDAFoodID = $ingredient['fkUSDAFoodID'];
 
-        $response['message'] .= "Processing Ingredient ID $ingredientID (USDAFoodID: $USDAFoodID)  \n";
+        //$response['message'] .= "Processing Ingredient ID $ingredientID (USDAFoodID: $USDAFoodID)  \n";
 
         // Convert quantity to grams
         $quantityInGrams = ConvertToGrams($quantity, $unitID);
-        $response['message'] .= "Converted quantity: $quantity $unitID -> $quantityInGrams grams   \n";
+        //$response['message'] .= "Converted quantity: $quantity $unitID -> $quantityInGrams grams   \n";
 
         // Query to get nutrient information for the ingredient
 		$nutrientQuery = "SELECT tblFoodNutrient.fldAmount, 
-								 tblNutrients.fldNutrientName, 
-								 tblNutrients.fldNutrientUnit, 
-								 tblNutrients.fldLabelName, 
-								 tblNutrients.fldLabelRank
-						  FROM tblFoodNutrient
-						  JOIN tblNutrients ON tblFoodNutrient.fkNutrientID = tblNutrients.pkNutrientID
-						  WHERE tblFoodNutrient.fkFoodID = $USDAFoodID
-							AND tblNutrients.fldLabelName IS NOT NULL
-							AND tblNutrients.fldLabelName != ''
-						  ORDER BY tblNutrients.fldLabelRank ASC";
+								tblNutrients.fldNutrientUnit, 
+								tblNutrients.fldLabelName, 
+								tblNutrients.fldLabelRank
+						FROM tblFoodNutrient
+						LEFT JOIN tblNutrients ON tblFoodNutrient.fkNutrientID = tblNutrients.pkNutrientID
+						WHERE tblFoodNutrient.fkFoodID = $USDAFoodID
+						AND tblNutrients.fldLabelName IS NOT NULL
+						AND tblNutrients.fldLabelName != ''
+						ORDER BY tblNutrients.fldLabelRank ASC";
+        //$response['message'] .= "Executing nutrient query: $nutrientQuery\n";
+
         $nutrientResult = $mysqli->query($nutrientQuery);
 
         if (!$nutrientResult) {
@@ -68,41 +78,65 @@ function NutrientCalculations($RecipeID) {
             continue;
         }
 
-        $response['message'] .= "Nutrients fetched successfully for USDAFoodID $USDAFoodID.   \n";
+        if ($nutrientResult->num_rows === 0) {
+			$response['message'] .= "No nutrient data found for USDAFoodID $USDAFoodID. Skipping this ingredient.\n\n";
+			continue; // Move to the next ingredient
+		}
 
-        // Process each nutrient
-        while ($nutrient = $nutrientResult->fetch_assoc()) {
-            $amount = $nutrient['fldAmount'];
-            $nutrientName = $nutrient['fldNutrientName'];
-            $unit = $nutrient['fldNutrientUnit'];
-            $labelName = $nutrient['fldLabelName'];
-            $rank = $nutrient['fldLabelRank']; // Retrieve rank here
+		if ($nutrientResult && $nutrientResult->num_rows > 0) {
+			$response['message'] .= "Nutrients fetched successfully for USDAFoodID $USDAFoodID.\n";
 
-            // Scale the amount based on the quantity in grams
-            $scaledAmount = ($amount / 100) * $quantityInGrams;
+			// Process each nutrient
+			while ($nutrient = $nutrientResult->fetch_assoc()) {
+				$amount = $nutrient['fldAmount'];
+				$unit = $nutrient['fldNutrientUnit'];
+				$labelName = $nutrient['fldLabelName'];
+				$rank = $nutrient['fldLabelRank'];
 
-            // Sum the nutrient content
-            if (!isset($nutrients[$labelName])) {
-                $nutrients[$labelName] = [
-                    'nutrient' => $labelName,
-                    'totalAmount' => 0,
-                    'rank' => $rank, // Add rank to the nutrient array
-                    'unit' => $unit
-                ];
-            }
-            $nutrients[$labelName]['totalAmount'] += $scaledAmount;
-        }
+				//$response['message'] .= "Processing nutrient: $labelName (Amount: $amount, Unit: $unit, Rank: $rank)\n";
 
-        $totalWeight += $quantityInGrams;
+				// Scale the amount based on the quantity in grams
+				$scaledAmount = ($amount / 100) * $quantityInGrams;
+				$response['message'] .= $scaledAmount." ".$labelName."\n";
+
+				// Sum the nutrient content
+				if (!isset($nutrients[$labelName])) {
+					$nutrients[$labelName] = [
+						'nutrient' => $labelName,
+						'totalAmount' => 0,
+						'rank' => $rank,
+						'unit' => $unit
+					];
+				}
+				$nutrients[$labelName]['totalAmount'] += $scaledAmount;
+			}
+			
+			$totalWeight += $quantityInGrams;
+			$response['message'] .= "Total Weights: ".$totalWeight."\n";
+		}
+		$response['message'] .= "TEST1";
     }
-
+	$response['message'] .= "TEST2";
+	
     // Handle recipes-as-ingredients (fldType=2)
-    $recipeQuery = "SELECT fkComponentID, fldQuantity, fkUnitID FROM tblRecipeIngredients WHERE fldType=2 AND fkRecipeID=$RecipeID";
+	/*
+	$recipeQuery = "SELECT fkComponentID, 
+						   fldQuantity, 
+						   fkUnitID 
+					FROM tblRecipeIngredients 
+					WHERE fldType=2 
+					AND fkRecipeID=$RecipeID";
     $recipeResult = $mysqli->query($recipeQuery);
-    if (!$recipeResult) {
-        $response['message'] .= "Error fetching recipes-as-ingredients for RecipeID $RecipeID: " . $mysqli->error . "\n";
-        return;
-    }
+
+	if (!$recipeResult) {
+		$response['message'] .= "No Recipe-as-ingredient for RecipeID $RecipeID: " . $mysqli->error . "\n";
+		return;
+	}
+
+	if ($recipeResult->num_rows === 0) {
+		$response['message'] .= "No Recipe-as-Ingredient found for RecipeID $RecipeID\n";
+		return; // Or continue, depending on desired behavior
+	}
 
     while ($recipeIngredient = $recipeResult->fetch_assoc()) {
         $componentRecipeID = $recipeIngredient['fkComponentID'];
@@ -123,7 +157,7 @@ function NutrientCalculations($RecipeID) {
 
         // Convert the quantity to grams
         $quantityInGrams = ConvertToGrams($quantity, $unitID);
-        $response['message'] .= "Converted quantity for Recipe-as-Ingredient: $quantity $unitID -> $quantityInGrams grams\n";
+        //$response['message'] .= "Converted quantity for Recipe-as-Ingredient: $quantity $unitID -> $quantityInGrams grams\n";
 
         // Process each nutrient in the component recipe
         foreach ($componentNutrition as $nutrient) {
@@ -145,24 +179,38 @@ function NutrientCalculations($RecipeID) {
 
         $totalWeight += $quantityInGrams;
     }
-
+	*/
+	
     // Add total weight to response
-    $response['message'] .= "Total Weight after processing ingredients: $totalWeight grams\n";
-    $response['nutrition']['totalWeight'] = $totalWeight;
-
-    // Add nutrient information to response
-    $response['nutrition']['nutrients'] = array_values($nutrients);
-
-    // Update the recipe with the nutrition information
+    $response['message']="WE MADE IT HERE"."\n\n";
+	$response['message'] .= "Total Weight after processing ingredients: ".$totalWeight." grams\n\n";
+	
+    $response['nutrition']['totalWeight'] = $totalWeight ?? 0;
+	$response['nutrition']['nutrients'] = !empty($nutrients) ? array_values($nutrients) : [];
+    print_r($response['nutrition']);
+	
+	// Update the recipe with the nutrition information
     $nutritionJson = json_encode($response['nutrition']);
-    $updateQuery = "UPDATE tblRecipes SET fldNutrition='$nutritionJson' WHERE RecipeID=$RecipeID";
-    $mysqli->query($updateQuery);
+	if (json_last_error() !== JSON_ERROR_NONE) {
+		$response['message'] .= "Error encoding nutrition JSON: " . json_last_error_msg() . "\n";
+		$response['status'] = 'error';
+		echo json_encode($response);
+		return;
+	}
+    
+	//UPDATE tblRecipes with the new nutrition value array
+	$updateQuery = "UPDATE tblRecipes SET fldNutrition='$nutritionJson' WHERE RecipeID=$RecipeID";
+	$response['message'] .= "Executing update query: $updateQuery\n";
+	$mysqli->query($updateQuery);
 
-    if ($mysqli->error) {
-        $response['message'] .= "Error updating RecipeID $RecipeID with nutrition information: " . $mysqli->error . "\n";
-    } else {
-        $response['message'] .= "Nutrition information updated successfully for RecipeID $RecipeID.\n";
-    }
+	if ($mysqli->error) {
+		$response['message'] .= "Error updating RecipeID $RecipeID with nutrition information: " . $mysqli->error . "\n";
+		$response['status'] = 'error';
+		echo json_encode($response);
+		return;
+	}
+	
+	$response['message'] .= "Nutrition information updated successfully for RecipeID $RecipeID.\n";
 }
 
 function ConvertToGrams($quantity, $unitID) {
@@ -190,6 +238,7 @@ function ConvertToGrams($quantity, $unitID) {
         case 1:  // no unit/produce piece
         case 24: // stick
         case 16: // bag
+        case 13: //piece
             return $quantity * 1; // Using 1 as a placeholder
         case 17: // box
             return $quantity * 4;
@@ -212,6 +261,9 @@ function ConvertToGrams($quantity, $unitID) {
             throw new Exception("Unknown unitID: $unitID");
     }
 }
+
+
+
 
 try{
 	if (isset($_POST['Action'])){
@@ -338,7 +390,7 @@ try{
 			$PrepNotes = $_POST['PrepNotes']; $response['message'].="\nPrepNotes: ".$PrepNotes;
 
 			//Updates
-			$RecipeIngredientID=$_POST['RecipeIngredientID']; $response['message'].="\n Existing Row IngredientID: ".$RecipeIngredientID;
+			$RecipeIngredientID=$_POST['RecipeIngredientID']; $response['message'].="\nExisting Row IngredientID: ".$RecipeIngredientID."\n";
 
 
 			// Check required fields for regular ingredients and recipe-as-ingredient
@@ -381,7 +433,7 @@ try{
 				$STMT = $mysqli->prepare($SQL);
 				$STMT->bind_param("iidisi", $IngredientID, $Order, $Quantity, $UnitID, $PrepNotes, $RecipeIngredientID);
 				if ($STMT->execute()) {
-					$response['message'].= 'Ingredient updated successfully';
+					$response['message'].= "Ingredient updated successfully\n\n";
 					NutrientCalculations($RecipeID);
 				} 
 				else {
@@ -593,22 +645,21 @@ try{
 			exit;
 		}
 	
-		
-		/*/////////////////////////////////////
-		/////     JAVASCRIPT RESPONSE     /////
-		/////////////////////////////////////*/
-		header('Content-Type: application/json');
-		echo json_encode($response);
+		$testResponse="test";
+		//$response['nutrition']=$testResponse;$response['message']=$testResponse;$response['data']=$testResponse;$response['status']=$testResponse;
+
 	}//if(isset($_POST['Action'])
 }
 catch (Exception $e) {
     $response['status'] = 'error';
-    $response['message'] .= 'An error occurred';
-    $response['error'] = array(
-        'code' => $e->getCode(),
-        'message' => $e->getMessage(),
-        'file' => $e->getFile(),
-        'line' => $e->getLine()
-    );
+    $response['message'] .= "End of Script: An error occurred";
 }
+	/*/////////////////////////////////////
+	/////     JAVASCRIPT RESPONSE     /////
+	/////////////////////////////////////*/
+	if (ob_get_length()) {
+		ob_end_clean();
+	}
+	header('Content-Type: application/json');
+	echo json_encode($response);
 ?>
